@@ -1,0 +1,383 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <!-- <div class="herocontainer ml-0 p-0">
+        <div class="zbhero ">explore the &nbsp;<span style="color:yellow"> unknown</span></div>
+        <div class="buttonbody">
+            <div class="search-box">
+                <button type="submit" value="search" class="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Type to Search...">
+            </div>
+        </div>
+    </div> -->
+
+    <!-- particles -->
+    <!-- <div id="particles" style="background-color: #161616;"></div> -->
+
+    <!-- hero section -->
+    <div class="overlay-bg" style="width:100%; height:970px;position:absolute;background-color:rgba(0, 0, 0, .5);z-index:5;"></div>
+    <div class="container-fluid fluid-properties-1920" style="position:relative;padding-top:200px; padding-bottom: 300px;padding-left: 60px;background-color: black;background-image: url(../static/img/white-inverted.jpg);background-size: 4000px;background-repeat: no-repeat;background-position: -1000px -1200px;">
+      <div class="herocontainer" style="position:relative;font-family: Rajdhani;font-weight: 700; font-size: 80px; text-align: left; text-transform: uppercase;color:white;z-index:10;">
+          <div class="left-to-right" style="padding:0 0;"><div class="learn" style="display: inline-block;">Learn and master the skills of 21st century</div></div>
+          <div class="right-to-left" style="color:white;padding:0 0"><div class="learn" style="display: inline-block;">with our fine tuned courses.</div></div>
+      </div>
+
+      <div class="scrolldown" style="position:relative;z-index:10;">
+        <div class="verticaltext">
+          scroll down &nbsp;&nbsp;――――
+        </div>
+      </div>
+      <div class="container-fluid p-0" style="position: absolute;left:0;margin-top:35px;z-index:10;">
+        <div class="block-seperator">
+          <div class="first-block bg"></div>
+          <div class="second-block"></div>
+          <div class="third-block"></div>
+          <div class="fourth-block"></div>
+          <div class="fifth-block"></div>
+          <div class="sixth-block"></div>
+        </div>
+      </div>
+    </div>
+ 
+
+
+    <!-- below hero section -->
+    <div class="container-fluid bg" style="padding-top:200px;padding-bottom: 120px; padding-left: 120px; padding-right: 120px;">
+      <div class="two-columns">
+
+        <!-- ROW 1  -->
+        <div class="row" >
+          <div class="col-sm pb-5">
+            <div class="imgwrapper" style="border-left: 10px solid white;">
+              <img src="../static/img/sprint.svg" alt="" height="500" width="800">
+            </div>
+          </div>
+          <div class="col-sm pb-5" style="padding-top: 80px;">
+            <div class="heading sub-heading underline pb-3">
+              be ahead of the curve.
+            </div>
+            <div class="para" style="padding-right: 270px;">
+              <p>Technology runs this world. No one can deny that.
+                It has become a necessity of the digital age. Acquiring these skills give you an upper edge over others, 
+                even if you are learning it as a side-skill. So, the next time when anyone asks what your hobby is, then 
+                make sure to mention this and see for yourself, how unique you are.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2  -->
+        <div class="row" style="padding-top:90px;" >
+          <div class="col-sm" style="padding-top: 100px;padding-left: 180px;">
+            <div class="heading sub-heading underline pb-3 ">
+              get practical. become better.
+            </div>
+            <div class="para" style="padding-right: 50px;">
+              <p>Lets admit it. No one can learn things without a proper dose of practicals. So we at ZBunker have taken a practical approach
+                towards teaching technical skills. All the courses come with loads of practicals and hands-on approach
+                so that when it comes to developing your own programs, you won't even miss a spot.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm" style="padding-right: 140px; padding-top:50px;">
+            <div class="imgwrapper"style="border-right: 10px solid white;">
+              <img src="../static/img/shuriken.svg" alt="" height="500" width="800">
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 3  -->
+        <div class="row" style="padding-top: 180px;" >
+          <div class="col-sm pb-5">
+            <div class="imgwrapper"style="border-left: 10px solid white;">
+              <img src="../static/img/ninja.svg" alt="" height="500" width="800">
+            </div>
+          </div>
+          <div class="col-sm pb-5" style="padding-top: 100px;">
+            <div class="heading sub-heading underline pb-3">
+              train like a ninja.
+            </div>
+            <div class="para" style="padding-right: 270px;">
+              <p>ZBunker recommends a three-pointer learning paradigm. Watch. Practice. Implement.
+                Watch the comprehensive, straight-forward and up to the point videos. Practice them to grasp the concepts better.
+                Finally, implement what you have learnt to create a project, if applicable. This will not only make you confident, but also 
+                build your fundamentals to the core.
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- <div class="searchOutputs bg-primary"> -->
+      <!-- <div class="album py-5 bg-muted">
+        <div class="container">
+          <div class="hheading d-flex justify-content-center mt-5">Search Results for: "{{ word }}"</div>
+          <hr style="background-color: black;">
+          <div class="row">
+            {% for x in videos %}
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img>
+                <div class="card-body">
+                  <p class="card-text">{{ x }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a type="button" href="#" class="btn btn-sm btn-outline-success">View</a>
+                    </div>
+                    <small class="text-muted">{{ x }} mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- marquee -->
+    <div class="marqueebody">
+      <div class="marqueecontainer mainmarquee">
+          <div class="marqueee">
+              <div class="marqueee__inner firsty"><span>BUNDLES_</span><span>BUNDLES_</span><span>BUNDLES_</span><span>BUNDLES_</span></div>
+          </div>
+          <div class="textabovemarquee" style="margin-left: -522px;">
+            POPULAR BASIC PLAN BUNDLES_
+          </div>
+      </div>
+  </div class="marqueebody"> 
+    
+  
+    <!-- Photo Grid -->
+    <div class="container-fluid pd-t-50 pb-5">
+      <div class="row"> 
+        <div class="col">
+          <div class="bundlewrapper bw-left first-image">
+            <a href="" style="width:100%">
+              <div class="imgwrap">
+                <img class="imagey" src="../static/img/emergingpython5.png" style="width:100%">
+              </div>
+                <div class="imgtxt">
+                  ethical hacking
+                </div>
+            </a>
+          </div>
+          <div class="bundlewrapper bw-left later-image">
+            <a href="" style="width:100%">
+              <div class="imgwrap">
+                <img class="imagey" src="../static/img/emergingpython1.png" style="width:100%">
+              </div>
+                <div class="imgtxt">
+                  C PROGRAMMING
+                </div>
+            </a>
+          </div>
+          <div class="bundlewrapper bw-left later-image">
+            <a href="" style="width:100%">
+              <div class="imgwrap">
+                <img class="imagey"  src="../static/img/emergingpython.png" style="width:100%">
+              </div>
+                <div class="imgtxt">
+                  new bundle0
+                </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="bundlewrapper bw-right first-image">
+            <a href="" style="width:100%">
+              <div class="imgwrap">
+                <img class="imagey" src="../static/img/emergingpython.png" style="width:100%">
+              </div>
+                <div class="imgtxt">
+                  python programming
+                </div>
+            </a>
+          </div>
+          <div class="bundlewrapper bw-right later-image">
+            <a href="" style="width:100%">
+              <div class="imgwrap">
+                <img class="imagey" src="../static/img/emergingpython.png" style="width:100%">
+              </div>
+                <div class="imgtxt">
+                  new bundle1
+                </div>
+            </a>
+          </div>
+          <div class="bundlewrapper bw-right later-image">
+            <a href="" style="width:100%">
+              <div class="imgwrap">
+                <img class="imagey" src="../static/img/linuxfade.png" style="width:100%;transform: scaleX(-1);">
+              </div>
+                <div class="imgtxt">
+                  linux essentials
+                </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  <!-- marquee --> <!--PRIME EXLUSIVE BUNDLES-->
+  <div class="marqueebody" style="padding-bottom: 120px;">
+    <div class="marqueecontainer mainmarquee">
+        <div class="marqueee">
+            <div class="marqueee__inner firsty"><span>EXCLUSIVE_</span><span>EXCLUSIVE_</span><span>EXCLUSIVE_</span><span>EXCLUSIVE_</span></div>
+        </div>
+        <div class="textabovemarquee" style="margin-left: -520px;">
+          A PEEK AT OUR PRIME BUNDLES_
+        </div>
+    </div>
+  </div class="marqueebody"> 
+
+  <div class="prime-image-sliderr">
+    <div class="slide-trackr">
+        <div class="mover-1r">
+            <img src="../static/img/zbunkercarousel2.png">
+        </div>
+        <div class="mover-1r">
+            <img src="../static/img/zbunkercarousel2.png">
+        </div>
+    </div>
+    
+  </div>
+
+    <!-- PRICING TABLE -->
+    <div class="container-fluid" style="background-color: black;">
+      <div class="heading" style="padding-top:80px;position: absolute;left:50%;margin-left: -242px;">pricing and plans</div>
+      <div class="pricing-table-container">
+          <div class="pricing-table">
+              <div class="row">
+
+                  <!-- BASIC -->
+                  <div class="col">
+                      <div class="pricing-table">
+                          <div class="basic" style="padding-top: 50px;">
+                              <div class="heading prices">
+                                  BASIC
+                              </div>
+                              <div class="cost" style="color:#ec4e00">
+                                  FREE
+                              </div>
+                              <ul class="pricing-items">
+                                  <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Basic Plan Videos and Contents</li>
+                                  <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Codes and Downloadable Contents</li>
+                                  <li><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Early Access to Videos</li>
+                                  <li><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Special Offers and Discounts on Merchs</li>
+                                  <li><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Prime Exclusive Video Bundles</li>
+                              </ul>
+          
+                              
+                          </div>
+                      </div>
+                      
+                      
+                  </div>
+
+                  <!-- PRIME -->
+                  <div class="col">
+                      <div class="pricing-table">
+                          <div class="prime" style="padding-top: 50px;">
+                              <div class="heading prices">
+                                  PRIME
+                              </div>
+                              <div class="cost" style="color:#ec4e00">
+                                  ₹100*
+                              </div>
+                              
+                              <ul class="pricing-items">
+                                  <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Basic Plan Videos and Contents</li>
+                                  <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Codes and Downloadable Contents</li>
+                                  <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Early Access to Videos</li>
+                                  <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Special Offers and Discounts on Merchs</li>
+                                  <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Prime Exclusive Video Bundles</li>
+                              </ul>
+                              <div class="primebtn custombtn"> 
+                                  <button class="butn butn-white" onclick="window.open('/prime','_blank')" >
+                                      <span class="butn__inner forprice">
+                                          <span class="butn__slide"></span>
+                                          <span class="butn__content" style="padding:0;" >view more</span>
+                                      </span>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    <!-- TESTIMONIALS -->
+    <div class="container-fluid secondary">
+      <div class="heading center" id="observed" style="padding-top: 240px; padding-bottom: 240px;">
+        <div class="txt underline un-white" style="display: inline;font-size: 90px;">
+          no competition. nothing comes even close. 
+        </div>
+
+        <div class="heading original" style="font-size: 40px;">
+          Join the zbunker community. Support us. make an impact.
+        </div>
+
+        <div>
+          <div class="socials flex-center container">
+            <div class="left-side-text heading">zbunker</div>
+            <div id='zbunkerend' class="left-side-text" style="font-size: 40px;">&nbsp;&nbsp;✘&nbsp;&nbsp;</div>
+            <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube-play fa-2x solla"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0 avax" style="position: absolute;left:0;margin-top:-58px; transform: rotate(180deg);">
+      <div class="block-seperator">
+        <div class="first-block " style="height: 150px;"></div>
+        <div class="second-block "></div>
+        <div class="third-block "></div>
+        <div class="fourth-block "></div>
+        <div class="fifth-block "></div>
+        <div class="sixth-block "style="height: 160px;"></div>
+      </div>
+    </div>
+    
+    <div class="another-section" style="height: 900px;background-image: url(../static/img/blueprint-inverted.jpg);background-repeat: no-repeat;background-size: cover;background-color: black;">
+      <div class="endingsection graybg " style="background: rgba(0, 0, 0, .6);">
+        <div class="endingimg">
+          <img src="../static/img/zglitch.gif" style="height: 320px;">
+        </div>
+
+        <div class="footer-section">
+          <div class="left-col heading">
+            fuelled by creativity. a true masterpiece.
+            
+          </div>
+          <div class="copyright heading med-heading" style="position: absolute; font-size: 15px; margin-top: 490px;">
+            Copyright · ZBunker 2021 - 2023 | All rights reserved
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- Play and Back-to-Top buttons -->
+    <div class="enclose bordar black" id="bottomtoup" ><i class="fas fa-caret-up"></i></div>
+    <div class="enclose bordar eleft black" id="mute" style="position:fixed;z-index:10;"><div class="playbtn"><i class="fas fa-play"></i></div>
+      <div class="soundbars">
+        <i class="fa fa-pause"></i>
+      </div>
+    </div>
+    <audio  id="player" loop >
+      <source src='../static/audio/Web-song.mp3' type='audio/mpeg'/>
+    </audio>
+
+    <script src="{{ url_for('static', filename='sound.js') }}" ></script>
+    <script src="{{ url_for('static', filename='bottomtoup.js') }}" ></script>
+{% endblock %}

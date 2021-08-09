@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row no-gutter gray">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex pakki pl-0">
+            <div class="glitchzbunker">
+                <img src="../static/img/glitchlogo.gif" alt="">
+            </div>
+        </div>
+
+        <!-- The content half -->
+        <div class="col-md-6 pakki" style="padding-bottom: 60px;">
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto bordar">
+                            <h3 class="display-4" style="font-weight: 700; text-transform: uppercase; color:#EC4E00;">Login to Prime</h3>
+                            <p class="mb-4" style="color: white; font-weight: 400; font-size: 20px;text-transform: uppercase;">We appreciate Your <b>commitment</b> to ZBunker</p>
+                            <form method="POST" action="">
+                                {{ form.hidden_tag() }}
+                                <fieldset class="form-group">
+                                    <!-- <legend class="border-bottom mb-4">Let's sign you up</legend> -->
+                                    <div class="form-group mb-4">
+                                        {{ form.email.label(class="form-control-label") }}
+                
+                                        {% if form.email.errors %}
+                                            {{form.email(class="form-control form-conrtol-lg is-invalid")}}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.email.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                    
+                                        {% else %}
+                                            {{ form.email(class="form-control form-control-lg") }}
+                                        {% endif %}
+                                        
+                                    </div> 
+                                    <div class="form-group mb-4 shadow-sm">
+                                        {{ form.password.label(class="form-control-label") }}
+                                            
+                                        {% if form.password.errors %}
+                                            {{form.password(class="form-control form-conrtol-lg is-invalid")}}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.password.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                    
+                                        {% else %}
+                                            {{ form.password(class="form-control form-control-lg") }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-check mb-4 mt-5" style="font-size: 17px; color:white;font-weight: 400;">
+                                        {{ form.remMe(class="form-check-input") }}
+                                        {{ form.remMe.label(class="form-check-label") }}
+                                    </div>
+                                </fieldset>
+                                <div class="form-group mb-4">
+                                    {{ form.login(class="btn btn-light") }}
+                                </div>
+                                <small class="text-muted">
+                                    <a class = "fp" href="#" style="text-decoration: none; color:#EC4E00;">Forgot Password?</a>
+                                </small>
+                            </form>
+                            <div class="border-top pt-3">
+                                <small class="text-muted" >
+                                    Don't Have An Account? <a href="{{ url_for('register') }}" class="ml-2" style="text-decoration:none;color:white;">Sign Up Now</a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+    </div>
+</div>
+
+{% endblock %}

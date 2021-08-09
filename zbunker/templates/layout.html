@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- favicon -->
+    <script src="https://kit.fontawesome.com/f1d715eefc.js" crossorigin="anonymous"></script>
+    <!-- main.css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='hola.css') }}">
+    
+    <!-- venobox -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='venobox/venobox.css') }}" type="text/css" media="screen" />
+
+    <!-- owl carousel -->
+    <!-- <link rel="stylesheet" href="../static/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/owlcarousel/owl.theme.default.min.css">  
+    <link rel="stylesheet" href="../static/animate.css">   -->
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="../static/swiper/swiper-bundle.min.css" />
+
+    <title>
+        {% if title %}
+            ZBunker · {{title}}
+        
+        {% else %}
+            ZBunker
+        {% endif %}
+    </title>
+  </head>
+
+  <body>
+      <!-- Responsive navbar-->
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{url_for('home')}}">ZBUNKER</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('home')}}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="navbar-nav justify-content-end">
+              {% if current_user.is_authenticated %}
+                <a class="nav-item nav-link" href="#">New Post</a>    
+                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+              {% else %}
+              <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+              <button class="btn btn-outline-warning my-2 my-sm-0 ml-4" onclick="window.location.href = '/prime'">Join Prime</button>
+              {% endif %}
+            </div> 
+        </div>
+      </nav> -->
+      {% if title != "Landing" %}
+      <header class="navbar navbar-expand-lg zbunkernav">
+        <a href="{{url_for('home')}}">
+          <div class="zbunkerlogo">
+            <img src="../static/img/zglitch.gif" alt="" class="logo">
+          </div>
+          
+        </a>
+        <nav>
+          <ul class="navlinks">
+            <li><div class="kuk-cont"><a class="link link--kukuri" data-letters="HOME" href="{{url_for('home')}}">Home</a></li></div>
+            <li><div class="kuk-cont"><a class="link link--kukuri" data-letters="About" href="{{url_for('about')}}">about</a></li></div>
+            <li><div class="kuk-cont"><a class="link link--kukuri" data-letters="access basic" href="{{url_for('basic')}}">access basic</a></li></div>
+            {% if current_user.is_authenticated %}
+            <li><div class="kuk-cont"><a class="link link--kukuri" data-letters="access prime" href="{{url_for('logout')}}">access prime </a></li></div>
+            <li><div class="kuk-cont"><a class="link link--kukuri" data-letters="logout" href="{{url_for('logout')}}">logout </a></li></div>
+            {% if current_user.username == "admin" %}
+              <li><div class="kuk-cont"><a class="link link--kukuri" data-letters="admin rights" href="{{url_for('logout')}}">admin rights</a></li></div>
+            {% endif %}
+            {% else %}
+            <li><div class="kuk-cont"><a class="link link--kukuri" data-letters="Login" href="{{url_for('login')}}">Login</a></li></div>
+            <!-- primebutton -->
+            <div class="primebtn customheightfornav "> 
+              <button class="butn butn-white butn-resp" onclick="window.open('/prime','_blank')">
+                  <span class="butn__inner innerfornav">
+                      <span class="butn__slide"></span>
+                      <span class="butn__content fornav">join prime</span>
+                  </span>
+                  </button>
+              </div>
+          </div>
+            {% endif %}
+          </ul>
+        </nav>
+      </header>
+
+      <section class="bgexp">
+
+      </section>
+
+      {% endif %}
+      {% block content %}{% endblock %}
+ 
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- backtotop js -->
+
+    <!-- Swiper JS -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/carousel.js"></script> -->
+
+    
+    <!-- owlcarousel JS -->
+    <!-- <script src="../static/owlcarousel/owl.carousel.min.js"></script> -->
+    
+    <!-- venobox -->
+    <script src="../static/venobox/venobox.min.js"></script>
+    <!-- initialising venobox -->
+    <script>
+      $(document).ready(function(){
+        $('.venobox').venobox(
+          {
+            'spinner':'wave',
+            'spinColor':'#ec4e00',
+          }
+        ); 
+      });
+    </script>    
+
+    <!-- custom carousel -->
+    <!-- <script src="../static/ccarousel.js"></script> -->
+    
+  </body>
+</html>

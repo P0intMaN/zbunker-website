@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <div class="container-fluid p-0" style="background-color: black;height:500px; display:flex;align-items:center;position:relative;">
+    <div class="gallery-items" style="position: absolute;"><i></i></div>
+    <div class="scroll terminal-blink" style="margin-bottom: 10px;position: absolute;right:0;font-size:15px;color:white;font-weight: 500;text-transform: uppercase; padding-left:10px;bottom:0;padding-right:5px;">scroll</div>
+
+    
+
+    <div class="swiper-text-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="heading " style="font-size:80px;" data-text="ethical hacking"><a href="{{url_for('home')}}"><i>ethical hacking</i></a></div>
+        </div>
+        
+        <div class="swiper-slide">
+          <div class="heading " style="font-size:80px;" data-text="linux system"><a href="{{url_for('home')}}"><i>linux system</i></a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="heading " style="font-size:80px;" data-text="a.i. basics"><a href="{{url_for('home')}}"><i>A.I. Basics</i></a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="heading " style="font-size:80px;" data-text="mongo db "><a href="{{url_for('home')}}"><i>mongo db nosql</i></a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="heading " style="font-size:80px;" data-text="c programming"><a href="{{url_for('home')}}"><i>c programming</i></a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="heading " style="font-size:80px;" data-text="net analysis"><a href="{{url_for('home')}}"><i>nmap network analysis</i></a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="heading " style="font-size:80px;" data-text="python"><a href="{{url_for('home')}}"><i>python basics</i></a></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="heading " style="font-size:80px;" data-text="version control"><a href="{{url_for('home')}}"><i>GIT essentials</i></a></div>
+        </div>
+  
+      </div>
+    </div>
+
+  </div>
+
+    <div class="container-fluid p-0 ssecondary">
+        <div class="container-fluid ssecondary" style="display:flex;position: relative;justify-content: center;align-items: center;height:500px;">
+          <div class="heading center">"programming is a skill best acquired by <span class="original">practice and example</span>"</div>
+          <div class="sm-heading heading" style="position:absolute; margin-top:250px; margin-left:1150px;">- alan turing</div>
+        </div>
+    </div>
+
+<!-- vertical swiper -->
+
+    <div class="gallery-container" style="background-color:black;background-image: url('../static/img/background_pattern.png');">
+      <div class="button-wrapper" style="position:absolute;">
+        <div class="next " ><svg width="15px" height="9px"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M14.991,7.499 L13.544,8.991 L7.447,2.703 L1.380,8.960 L0.008,7.546 L6.902,0.436 L7.098,0.638 L7.718,-0.001 L14.991,7.499 Z"></path></svg></div>
+        <div class="prev " ><svg width="15px" height="9px"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M14.991,1.501 L7.718,9.001 L7.098,8.362 L6.902,8.564 L0.008,1.454 L1.380,0.040 L7.447,6.297 L13.544,0.009 L14.991,1.501 Z"></path></svg></div>
+      </div>
+      <div class="thin-line" style="position: absolute;"></div>
+      <div class="counter" style="display: flex; position:absolute;">
+        <div class="slideno"></div>
+        <div class="slash">/</div>
+        <div class="fixedno">8</div>
+      </div>
+      
+      <div class="swiper-container gallery-main">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <img src="../static/img/emergingpython.png" width='620px;' alt="" class="gray-bordar-med" data-url="{{ url_for('home') }}" data-title="python programming" data-id = '1' data-para = "Python has been here for a while. Its one of the most famous and highly-demanded programming languages. Due to its wide application, It has become developer's favourite. Python is used in Unit Testing, creating terminal applications, developing Machine Learning models, core backends, heavy computations, graphing, app developement, you name it. Its used almost everywhere.  Even 80% of ZBUNKER is powered by Python">
+          </div>
+         
+          <div class="swiper-slide">
+            <img src="../static/img/emergingpython1.png" width='620px;' alt="" class="gray-bordar-med" data-url="{{ url_for('home') }}" data-title="c programming" data-id = '2' data-para = '"Nothing better than C", says Linus Torvalds, creator of Linux and a finnish Software Engineer. This language packs so much power that you can create an operating system out of it. Majority of famous programming languages like C++, JavaScript, Python, Perl, PHP, C#, Golang and many more are derived from C'>
+          </div>
+         
+          <div class="swiper-slide">
+            <img src="../static/img/emergingpython5.png" width='620px;' alt="" class="gray-bordar-med" data-url="{{ url_for('home') }}" data-title="ethical hacking" data-id = '3' data-para = "You NEED to know how to hack to not to get hacked. You have to become the hacker and think like one. Learn to break into systems, exploit common vulnerabilites and analyze networks. This is what we call, 'beating them at their own game' ">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="../static/img/nmap-fade.jpg" width='620px;' alt="" class="gray-bordar-med" data-url="{{ url_for('home') }}" data-title="nmap" data-id = '4' data-para = "The NMAP is always underrated. Reason? Not everyone knows it! But the guys who know NMAP at their fingertips know its power. When it comes to sniffing out vulnerabilites or scanning a network, NO ONE can beat this underdog. Every attack requires a strong , reliable recon and NMAP delivers just that.">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="../static/img/mongo-fade.png" width='620px;' alt="" class="gray-bordar-med" data-url="{{ url_for('home') }}" data-title="mongo db" data-id = '5' data-para = "Today's data are in trillions and with the advent of new technologies, new domains of the data are created dynamically. Hence, we can't really keep them in a relational form. This marked the end for RDBMS and paved the way for NOSQL databases. Mongo DB is a blazing fast NOSQL database. Ever heard of MERN stack? Well MongoDB is an integral part of it.">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="../static/img/ai-fade.png" width='620px;' alt="" class="gray-bordar-med" data-url="{{ url_for('home') }}" data-title="a.i. basics" data-id = '6' data-para = "Artificial Intelligence is the future. 10 years ago we didn't even think that A.I. would play a pivotal role in human development. Although the concept of AI has been there for a decade, it gathered momentum recently. In the basics of A.I. we will be covering the searching techniques used by A.I. problem solving agents to make decisions and arrive at the desired goal. Two A.I. milestone projects are also included. What more could you ask for? ">
+          </div>
+        
+          <div class="swiper-slide">
+            <img src="../static/img/linuxfade.png" width='620px;' alt="" class="gray-bordar-med" data-url="{{ url_for('home') }}" data-title="Linux essentials" data-id = '7' data-para = "Using Windows for programming or software development? Pretty Old School, eh? Its time to level up and learn the  operating system that millions of developers prefer. Linux is very fast, light-weight and comes power-packed with pre-installed libraries and programming languages. What's more amazing is that there are tons of different distributions of linux to choose from.">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="../static/img/git-fade.png" width='620px;' alt="" class="gray-bordar-med" data-url="{{ url_for('home') }}" data-title="git essentials" data-id = '8' data-para = "Got tired of keeping track of files and codes while working on a project? Well, your day is saved for git is here to the rescue. Git is the most widely used distributed version control tool trusted by engineers around the world. You can also invite developers to collaborate with your project by publishing it on remote platforms like Github and BitBucket. Git is an essential tool that a well rounded developer would love to have in his arsenal.">
+          </div>
+
+        </div>
+
+      </div>
+
+<!-- implement data-href for each slides-->
+
+      <div class="gallery-right">
+        <div class="gallery-text-container" style="width: 620px;">
+          <div class="heading large-heading gallery-text" style="line-height: 80px; padding-bottom:20px;"></div>
+          <div class=" un-anywhere un-anywhere-white" style="width:5%;height: 7px;"></div>
+          <p style="padding-top:40px;color:white;font-size:20px;font-family: 'Roboto Condensed'; font-weight: 200;"></p>
+          
+          <div class="two-buttons"style="display:flex;">
+            
+            <div class="edgtf-btn edgtf-btn-small edgtf-btn-outline ">
+              <span class="edgtf-btn-overlay"></span>
+              <span class="edgtf-btn-text"><a class="firstbutton" href="" style="color:inherit;text-decoration: none;">go to course</a></span>
+            </div>
+
+            <div class="edgtf-btn edgtf-btn-small edgtf-btn-outline btn-orange" style="margin-left:20px;">
+              <span class="edgtf-btn-overlay edgtf-btn-original"></span>
+              <span class="edgtf-btn-text edgtf-btn-basic"><a href="https://www.youtube.com" target="_blank" style="color:inherit;text-decoration: none;">watch on youtube</a></span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+      
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="../static/ccarousel.js"></script>
+<script src="../static/vertcarousel.js"></script>
+
+{% endblock %}

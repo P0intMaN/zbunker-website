@@ -1,0 +1,203 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="marqueebody">
+    <div class="marqueecontainer">
+        <div class="marqueee">
+            <div class="marqueee__inner first"><span>PRIME</span><span>PRIME</span><span>PRIME</span><span>PRIME</span></div>
+            <div class="marqueee__inner second"><span>TAKE CONTROL_</span><span>TAKE CONTROL_</span><span>TAKE CONTROL_</span><span>TAKE CONTROL_</span></div>
+        </div>
+    </div>
+</div class="marqueebody">    
+
+
+
+<div class="verttext">
+    <h3>FREE FOR LIMITED TIME &nbsp;<i class="fas fa-arrow-down"></i></h3>
+</div>
+
+<!-- benefits -->
+<div class="bg-back">
+    <div class="primefeaturess">
+        <!-- prime features -->
+        <div class="features" >
+            <div class="un-anywhere" style="margin-top:6%;margin-left:27.2%;width:9%; height:10px;"></div>
+            <div class="heading center original" style="font-size: 90px;padding-bottom: 120px;">prime status benefits</div>
+            <ul class="pricing-items heading med-heading less-bold">
+                <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;get access to all the videos and bundles (basic and prime)</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;get access to all the Codes and Downloadable Contents</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;get Early Access to Videos several days before it is published. Provide feedbacks to shape the videos to perfection</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Special Offers and Discounts on Merchs</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;get your name etched on the sponsors section at the official zbunker website</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;You will be automatically enrolled in all the giveaways</li>
+                <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Let everyone know that you are the driving force behind zbunker. we will display your names at the end of each video.</li>
+            </ul>
+        </div>
+            
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex pakki pl-0 pt-0">
+                <div id="particles">
+                    <div class="register"></div>
+                </div>
+        </div>
+
+        <!-- The content half -->
+        <div class="col-md-6 pakki">
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto pl-0">
+                            <h3 class="display-4" style="font-weight: 700; text-transform: uppercase; color:#EC4E00;">get prime benefits</h3>
+                            <p class="mb-4" style="color: white; font-weight: 400; font-size: 20px;text-transform: uppercase;">You are applying for <b>ZBunker Prime</b> Membership*</p>
+                            <form method="POST" action="">
+                                {{ form.hidden_tag() }}
+                                <fieldset class="form-group">
+                                    <!-- <legend class="border-bottom mb-4">Let's sign you up</legend> -->
+                                    <div class="form-group mb-4">
+                                        {{ form.username.label(class="form-control-label") }}
+                
+                                        {% if form.username.errors %}
+                                            {{form.username(class="form-control form-conrtol-lg is-invalid")}}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.username.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                    
+                                        {% else %}
+                                            {{ form.username(class="form-control form-control-lg") }}
+                                        {% endif %}
+                                        
+                                    </div>
+                                    <div class="form-group mb-4 shadow-sm">
+                                        {{ form.email.label(class="form-control-label") }}
+                
+                                        {% if form.email.errors %}
+                                            {{form.email(class="form-control form-conrtol-lg is-invalid")}}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.email.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                    
+                                        {% else %}
+                                            {{ form.email(class="form-control form-control-lg") }}
+                                        {% endif %}
+                                    </div>  
+                                    <div class="form-group mb-4 shadow-sm">
+                                        {{ form.password.label(class="form-control-label") }}
+                                            
+                                        {% if form.password.errors %}
+                                            {{form.password(class="form-control form-conrtol-lg is-invalid")}}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.password.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                    
+                                        {% else %}
+                                            {{ form.password(class="form-control form-control-lg") }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group mb-4 shadow-sm">
+                                        {{ form.confirmPassword.label(class="form-control-label") }}
+                
+                                        {% if form.confirmPassword.errors %}
+                                            {{form.confirmPassword(class="form-control form-conrtol-lg is-invalid")}}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.confirmPassword.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                    
+                                        {% else %}
+                                            {{ form.confirmPassword(class="form-control form-control-lg") }}
+                                        {% endif %}
+                                    </div>
+                                </fieldset>
+                                <div class="form-group mb-4">
+                                    {{ form.submit(class="btn btn-light") }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+    </div>
+</div>
+
+<div class="container-fluid pl-0 pr-0">
+    <div class="endprime">
+        <div class="endtext heading center  ">
+            <div class="txt underline un-white" style="display: inline;">
+                zbunker prime. its a game changer.
+            </div>
+        </div>
+
+        <div class="prime-members">
+            <div id="carouselExampleSlidesOnly" class="carousel slide center" data-ride="carousel" style="padding-top: 100px;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-cover">
+                            <div class="testimonial">
+                                <div class="testimonial-item"style="display: inline">
+                                <div class="heading original">found on YT</div>
+                                <div class="testimonial-content">
+                                    <p>" I found thsfdses sdfdsf sdfs sdf sdf sdfsfe guys via youtube and they have been alksjdflj sdflj sdlfkj lsdjfl sdf l "</p>
+                                </div>
+                                <div class="author">- mr damn</div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- second item -->
+                    <div class="carousel-item">
+                        <div class="carousel-cover">
+                            <div class="testimonial">
+                                <div class="testimonial-item"style="display: inline">
+                                <div class="heading original">insanely cheap</div>
+                                <div class="testimonial-content">
+                                    <p>" I found thsfdsessdfdsf sdfs sdf sdf sdfsfe guys via youtube and they have been alksjdflj sdflj sdlfkj lsdjfl sdf l "</p>
+                                </div>
+                                <div class="author">- mr damn</div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- third item -->
+                    <div class="carousel-item">
+                        <div class="carousel-cover">
+                            <div class="testimonial">
+                                <div class="testimonial-item"style="display: inline">
+                                <div class="heading original">simply brilliant</div>
+                                <div class="testimonial-content">
+                                    <p>" I found thsfdsessdfdsf sdfs sdf sdf sdfsfe guys via youtube and they have been alksjdflj sdflj sdlfkj lsdjfl sdf l "</p>
+                                </div>
+                                <div class="author">- mr damn</div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='particle.js') }}"></script>
+
+{% endblock %}
