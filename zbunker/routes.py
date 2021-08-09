@@ -77,4 +77,9 @@ def basic():
 def eth():
     title= 'Ethical Hacking'
     return render_template('eth.html',title=title)
-    # render this!
+    
+@app.route('/learn/python-programming')
+def pythonprogramming():
+    title= 'Python Programming'
+    return render_template('python.html',title=title)
+
