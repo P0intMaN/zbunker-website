@@ -1,5 +1,5 @@
 //Get the button:
-el = document.getElementById("bottomtoup").addEventListener('click',tophandler);
+elle = document.getElementById("bottomtoup").addEventListener('click',tophandler);
 
 mybutton = document.getElementById("bottomtoup")
 
