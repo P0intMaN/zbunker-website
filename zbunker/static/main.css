@@ -2084,19 +2084,26 @@ color: #00A1A9;
 .sidebar-list li{
   padding:10px 0;
   font-size: 20px;
+  transition: 0.2s;
 }
 
-.sidebar-list li:hover{
-  color:#ec4e00;
-  cursor: pointer;
-  -webkit-transition: color 0.2s ease-in-out;
-    -moz-transition:    color 0.2s ease-in-out;
-    -ms-transition:     color 0.2s ease-in-out;
-    -o-transition:      color 0.2s ease-in-out;
-    transition:         color 0.2s ease-in-out;
-}
 
 .sidebar-list a{
   text-decoration: none;
   color:inherit;
+  transition: 0.2s;
+}
+
+.sidebar-list a:hover{
+  padding-left:10px;
+  border-left: 2px solid #ec4e00;
+  color:#ec4e00;
+  cursor: pointer;
+  -webkit-transition: color ;
+    -moz-transition:    color ;
+    -ms-transition:     color ;
+    -o-transition:      color ;
+    transition:         color;
+  transition: padding 0.2s ease-in-out;
+  transition: border-left 0.2s ease-in-out;
 }
