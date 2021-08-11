@@ -11,5 +11,11 @@ ZBunker mainly is a **Flask-based** website. But, during the creation, following
 - Javascript 
 - HTML
 - CSS
-- 
+
+## Todo List
+[ ] Add course lists
+[ ] Session Handling
+[ ] Secure Login
+[x] Database Setup
+[ ] Deploymeht
 
