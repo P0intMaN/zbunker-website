@@ -1,0 +1,223 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="container-fluid p-0 black">
+        <div class="crypt-heading heading headingtext" data-item = 'Git Essentials' style="font-size:90px;padding-top:80px;"></div>
+
+        <!-- jump to category -->
+        <div class="container-fluid p-0">
+          <div class="inner-container">
+
+            <!-- videos -->
+            <div class="videos">
+              
+              <!-- video1 -->
+              <div class="video" id="git1">
+                <img src="../static/img/git/learngit.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/c8SWWswEZz8">Introduction to Git</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">This video marks the beginning of the Git playlist where we would be covering this awesome version control tool.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video2 -->
+              <div class="video" id="git2">
+                <img src="../static/img/git/settingupgit.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/FpUjePCuhJw">Setting Up Git</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">In this video, we will be installing and configuring git. Apart from this, we will also be verifying the git installation.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video3 -->
+              <div class="video" id="git3">
+                <img src="../static/img/git/gitrepo.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/Wn63k3uCRMA">The Git Repository</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">In this video, we will be Initializing our Git Repository. Now, there are two ways to initialize the repository:<br> 1) On an existing project<br> 2) Remotely.<br> In this video, we will stick to creating Git on an existing project (sometimes called, locally)</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video4 -->
+              <div class="video" id="git4">
+                <img src="../static/img/git/gitstage.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/U1sCfoyXO3I">Git Stages</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">In this video, we will look into the different stages of Git. So, when you decide to commit some changes to Git,  you would have to go through these stages. Now, stages are pretty important to understand before we move on to do git add and git commit  commands (which will be covered </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video5 -->
+              <div class="video" id="git5">
+                <img src="../static/img/git/git add & commit.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/6YW1daHhT68">Git Add & Git Commit</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">In this video, we will look work with Git add and Git commit commands. Git add is used to put the files into staging area while commit is used to move the files from staging area to the git repository.
+
+                      We would also be covering some additional scenarios to help understand these concepts better.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video6 -->
+              <div class="video" id="git6">
+                <img src="../static/img/git/gitignore.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/hZfwreRtgYY">gitignore: ignoring is important</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">Every time whenever you create a new file, or do some modifications in the existing file, Git immediately catches it. It is very useful, but sometimes it can get irritating when you have files that you don't want git to track and still appears in the untracked list (working area).</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video7 -->
+              <div class="video" id="git7">
+                <img src="../static/img/git/gitdiff.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/_hPF4JiNJ1Y">Git Diff</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">In this very short video, we will look at the git diff command. Diff command is used to list the difference between two versions of a file, between two commits or even between two branches.
+
+                      We will be covering the above three cases with less emphasis on the third case since we have never touched upon the branching part. But, in the next video, we will be implementing the third case as we build our branches and start working on it.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video8 -->
+              <div class="video" id="git8">
+                <img src="../static/img/git/gitbranch.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/gR5VB2XGlCU">Git Branch</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">One of the main purpose of Git was to introduce a branched workflow in development environments. It has many advantages whether you are working with a team or alone. Incorporating branched workflow is a good developmental practice and it is made possible by Git's branch command.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video9 -->
+              <div class="video" id="git9">
+                <img src="../static/img/git/githead.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/HvDjbAa9ZsY">Head & Detached Head</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">If you have worked with git, you might have come across a message saying 'head is now in a detached state'. Well, this happens particularly when you checkout a commit instead of a branch. In this video, we will cover in detail what exactly a head is and what is the detached head scenario.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video10 -->
+              <div class="video" id="git10">
+                <img src="../static/img/git/gitlog.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/u8O6XaLiu6w">Git Log & some flags</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">In this short video, we will be covering Git log command and couple of flags that come along with it.
+                      Git log command lists out your commits history of the current branch. Its the go-to command to know everything about your commits.
+                      
+                      We will cover git log and some important flags in this video. These flags format the output of git log which spits out many information and is also visually appealing.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video11 -->
+              <div class="video" id="git11">
+                <img src="../static/img/git/gitreset.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/-NPOCTNwd08">Git Reset</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">Not always our commit goes right. You might encounter a situation where you felt like the current edited file should have been committed earlier or did really bad commits. Whatever your reason maybe, if you want to reset back to a particular commit, Git reset helps you with that.</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <!-- videos section end -->
+
+            <!-- sidebar -->
+            <div class="sidebar">
+              <div class="sidebar-content">
+                
+                <div class="sidebar-item-level">
+                  <div class="level">level - basic | intermediate</div>
+                </div>
+
+                <div class="sidebar-item">
+                  <div class="sidebar-item-holder" style="text-align: left;">
+                    <div class="title-holder" style="position: relative;margin-bottom:20px;">
+                      <div class="un-anywhere" style="bottom:0; height:2px;width:10%;"></div>
+                      <div class="heading" style="font-size:35px;">contents</div>
+                    </div>
+                    
+                    <ul class="sidebar-list">
+                      <li><a href="#git1">Introduction</a></li>
+                      <li><a href="#git2">Setting Up</a></li>
+                      <li><a href="#git3">Git Repository</a></li>
+                      <li><a href="#git4">Git Stages</a></li>
+                      <li><a href="#git5">Git Add & Git Commit</a></li>
+                      <li><a href="#git6">Git .gitignore</a></li>
+                      <li><a href="#git7">Git Diff</a></li>
+                      <li><a href="#git8">Git Branch</a></li>
+                      <li><a href="#git9">Head & Detached Head</a></li>
+                      <li><a href="#git10">Git Log</a></li>
+                      <li><a href="#git11">Git Reset</a></li>
+                    </ul>                                                                                                                                                                                                                                     </ul>
+                  </div>
+                </div>
+
+                <!-- explore others -->
+                <div class="sidebar-item">
+                  <div class="sidebar-item-holder" style="text-align: left;">
+                    <div class="title-holder" style="position: relative;margin-bottom:20px;">
+                      <div class="un-anywhere" style="bottom:0; height:2px;width:10%;"></div>
+                      <div class="heading" style="font-size:35px;">EXPLORE OTHERS</div>
+                    </div>
+
+                    <div class="tag-cloud">
+                      <div class="tags">
+                        <a href="https://www.youtube.com">Python</a>
+                        <a href="https://www.youtube.com">Ethical Hacking</a>
+                        <a href="https://www.youtube.com">Linux</a>
+                        <a href="https://www.youtube.com">Nmap</a>
+                        <a href="https://www.youtube.com">AI Basics</a>
+                        <a href="https://www.youtube.com">Git Essentials</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- author -->
+                <div class="sidebar-item">
+                  <div class="heading center"><i>pointman.</i></div>
+                </div>
+
+              </div>
+            </div>
+            <!-- sidebar end -->
+
+          </div>
+          <!-- inner container end -->
+        </div>        
+        <!--container end  -->
+    </div>
+    <!-- main container end -->
+
+
+    <!--Back-to-Top button-->
+    <div class="enclose bordar black" id="bottomtoup" ><i class="fas fa-caret-up"></i></div>
+
+    <script src="../static/crypt.js"></script>
+    <script src="{{ url_for('static', filename='bottomtoup.js') }}" ></script>
+
+{% endblock %}
+
