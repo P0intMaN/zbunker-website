@@ -2060,6 +2060,7 @@ color: #00A1A9;
   margin:0 0 40px 0;
   padding:36px 22px 26px;
   border: 2px solid #272727;
+  min-width: 400px;
 }
 
 .level{
@@ -2106,4 +2107,29 @@ color: #00A1A9;
     transition:         color;
   transition: padding 0.2s ease-in-out;
   transition: border-left 0.2s ease-in-out;
+}
+
+
+.tags a::after{
+  content: "/";
+  padding:0 20px;
+  transition: 0.2s;
+}
+
+.tags a{
+  text-decoration: none;
+  color:white;
+  transition: 0.2s;
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+}
+
+.tags a:hover{
+  color: #ec4e00;
+  transition: color 0.2s ease-in-out ;
+}
+
+.tags a:hover::after{
+  color:white;
+  transition: 0.2s ease-in-out;
 }
