@@ -1,6 +1,6 @@
 # ZBunker
 
-![ZB logo](zbunker/static/img/zglitch.gif)
+![ZB logo](zbunker/static/img/zglitch-inverted.gif)
 
 ZBunker is a community run by a bunch of university students with an aim to spread awareness about open source and the power of programmming.
 
