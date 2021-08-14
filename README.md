@@ -32,9 +32,9 @@ We believe in ***free and quality education for all***.
 
 ## Tech Stack
 
-1. HTML
-2. CSS
-3. JavaScript
-4. Flask
-5. SQLAlchemy (ORM)
-6. Jinja2 Template Engine
+1. [HTML](https://www.w3schools.com/html/)
+2. [CSS](https://www.w3schools.com/css/)
+3. [JavaScript](https://www.javascript.com/) - The programming language of web
+4. [Flask](https://flask.palletsprojects.com/) - Flask is a microframework for Python based on Werkzeug and Jinja 2
+5. [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) - Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy ORM to your application.
+6. [Jinja2 Templates](https://jinja.palletsprojects.com/) - Templating language used with Flask for frontend purposes.
