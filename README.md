@@ -29,6 +29,7 @@ We believe in ***free and quality education for all***.
 - [ ] Add Google reCaptcha
 - [ ] Deploy rate limit check on login/register (Security)
 - [ ] Deploy the website on a public server (Final)
+- [ ] Make Website Responsive
 
 ## Tech Stack
 
@@ -38,3 +39,4 @@ We believe in ***free and quality education for all***.
 4. [Flask](https://flask.palletsprojects.com/) - Flask is a microframework for Python based on Werkzeug and Jinja 2
 5. [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) - an extension for Flask that adds support for SQLAlchemy ORM to your application.
 6. [Jinja2 Templates](https://jinja.palletsprojects.com/) - templating language used with Flask for frontend purposes.
+
