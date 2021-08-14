@@ -87,3 +87,8 @@ def pythonprogramming():
 def git():
     title= 'Git Essentials'
     return render_template('git.html',title=title)
+
+@app.route('/learn/nmap')
+def nmap():
+    title= 'Nmap'
+    return render_template('nmap.html',title=title)
