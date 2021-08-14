@@ -1,21 +1,6 @@
-# zbunker-website
+# ZBunker
 
-The full code repository of the official website of ZBunker
-visit the website <https://www.zbunker.in>
+ZBunker is a community that is run by a bunch of university students with an aim to spread awareness about open source and the power of programmming.
 
-## Tech Stack
-
-ZBunker mainly is a **Flask-based** website. But, during the creation, following were used:
-- Python
-- Flask
-- Javascript 
-- HTML
-- CSS
-
-## Todo List
-[ ] Add course lists
-[ ] Session Handling
-[ ] Secure Login
-[x] Database Setup
-[ ] Deploymeht
-
+The main mode of education is throught our YouTube channel, where we will walk you through some of the popular programming languages and how you can develop a skill set in this tech domain.
+We believe in free and quality education for all.
