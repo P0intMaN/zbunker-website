@@ -37,5 +37,5 @@ We believe in ***free and quality education for all***.
 2. [CSS](https://www.w3schools.com/css/)
 3. [JavaScript](https://www.javascript.com/) - The programming language of web
 4. [Flask](https://flask.palletsprojects.com/) - Flask is a microframework for Python based on Werkzeug and Jinja 2
-5. [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) - an extension for Flask that adds support for SQLAlchemy ORM to your application.
-6. [Jinja2 Templates](https://jinja.palletsprojects.com/) - templating language used with Flask for frontend purposes.
+5. [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) - An extension for Flask that adds support for SQLAlchemy ORM to your application.
+6. [Jinja2 Templates](https://jinja.palletsprojects.com/) - Templating language used with Flask for frontend purposes.
