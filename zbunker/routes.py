@@ -93,7 +93,7 @@ def nmap():
     title= 'Nmap'
     return render_template('nmap.html',title=title)
 
-@app.route('/learn/mongo')
+@app.route('/learn/mongodb')
 def mongo():
     title='Mongo DB'
     return render_template('mongo.html', title=title)
