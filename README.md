@@ -32,6 +32,7 @@ We believe in ***free and quality education for all***.
 - [ ] Migrate to PostgreSQL
 - [ ] Add forgot password functionality
 - [ ] Add Google reCaptcha
+- [ ] Add Payments Gateway (Instamojo or Stripe)
 - [ ] Deploy rate limit check on login/register (Security)
 - [ ] Deploy the website on a public server (Final)
 - [ ] Make Website Responsive
