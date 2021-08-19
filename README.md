@@ -2,6 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
 [![Pull Requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/P0intMaN/zbunker-website/issues)
+[![GitHub issues](https://img.shields.io/github/issues/P0intMaN/zbunker-website?color=red)](https://github.com/P0intMaN/zbunker-website/issues)
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UC1QZPervOHLiC4xpVnzbDFg?style=social)](https://www.youtube.com/channel/UC1QZPervOHLiC4xpVnzbDFg)
 
 
@@ -12,13 +13,13 @@ The main mode of education is through our [YouTube channel](https://www.youtube.
 
 We believe in ***free and quality education for all***.
 
-## About The Project
+## About The Project 🚀:
 
 *`zbunker-website`* project is focussed on creating an independent website dedicated to ZBunker. This website will feature all the courses, seminars, webinars and other learning resources that will be of great use for learners.
 
 *`zbunker-website`* uses **Flask** as the backend. Check out the [Tech Stack](#tech-stack) section to know about various tech stacks preferred and currently used for creating this website.
 
-## ToDo List
+## ToDo List 📝:
 
 - [x] Create a landing page
 - [x] Create interactve, functional homepage
@@ -35,7 +36,7 @@ We believe in ***free and quality education for all***.
 - [ ] Deploy the website on a public server (Final)
 - [ ] Make Website Responsive
 
-## Tech Stack
+## Tech Stack 💻:
 
 1. [HTML](https://www.w3schools.com/html/)
 2. [CSS](https://www.w3schools.com/css/)
