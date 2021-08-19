@@ -15,7 +15,7 @@ We believe in ***free and quality education for all***.
 
 ## About The Project 🚀:
 
-*`zbunker-website`* project is focussed on creating an independent website dedicated to ZBunker. This website will feature all the courses, seminars, webinars and other learning resources that will be of great use for learners.
+*`zbunker-website`* project is focussed on creating an independent website dedicated to **ZBunker**. This website will feature all the courses, seminars, webinars and other learning resources that will be of great use for learners.
 
 *`zbunker-website`* uses **Flask** as the backend. Check out the [Tech Stack](#tech-stack) section to know about various tech stacks preferred and currently used for creating this website.
 
