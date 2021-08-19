@@ -98,3 +98,7 @@ def mongo():
     title='Mongo DB'
     return render_template('mongo.html', title=title)
     
+@app.route('/learn/linux-essentials')
+def linux():
+    title="Linux"
+    return render_template('linux.html', title=title)
