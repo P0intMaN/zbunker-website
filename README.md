@@ -1,5 +1,10 @@
-
 <img src="zbunker/static/img/zglitch-inverted.gif" width="100%">
+
+[![Python Version](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
+[![Pull Requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/P0intMaN/zbunker-website/issues)
+[![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UC1QZPervOHLiC4xpVnzbDFg?style=social)](https://www.youtube.com/channel/UC1QZPervOHLiC4xpVnzbDFg)
+
+
 
 ZBunker is a community run by a bunch of university students with an aim to spread awareness about **open source** and the power of **programmming**.
 
