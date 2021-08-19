@@ -1,4 +1,5 @@
-![ZB logo](zbunker/static/img/zglitch-inverted.gif)
+
+<img src="zbunker/static/img/zglitch-inverted.gif" width="100%">
 
 ZBunker is a community run by a bunch of university students with an aim to spread awareness about **open source** and the power of **programmming**.
 
