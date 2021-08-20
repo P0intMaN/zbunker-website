@@ -3,6 +3,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
 [![Pull Requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/P0intMaN/zbunker-website/issues)
 [![GitHub issues](https://img.shields.io/github/issues/P0intMaN/zbunker-website?color=red)](https://github.com/P0intMaN/zbunker-website/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/P0intMaN/zbunker-website)](https://github.com/P0intMaN/zbunker-website/issues?q=is%3Aissue+is%3Aclosed)
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UC1QZPervOHLiC4xpVnzbDFg?style=social)](https://www.youtube.com/channel/UC1QZPervOHLiC4xpVnzbDFg)
 
 
