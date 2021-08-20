@@ -17,7 +17,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   /* background: #161616; */
-  background-image: url(../static/img/zbunkerhero.png);
+  background-image: url(../../static/img/zbunkerhero.png);
   color: black;
   /* margin-top: 110px; */
   /* overflow: hidden; */
@@ -355,7 +355,7 @@ nav ul li {
 }
 
 .zglitch {
-  background-image: url(../static/img/zglitch.gif);
+  background-image: url(../../static/img/zglitch.gif);
   height: 300px;
   width: 900px;
   background-size: cover;
@@ -590,17 +590,17 @@ nav ul li {
 }
 
 .disrupt{
-  background-image: url(../static/img/background_pattern.png);
+  background-image: url(../../static/img/background_pattern.png);
 }
 
 .disrupt-dark{
   background-color: black;
-  background-image: url(../static/img/background_pattern.png);
+  background-image: url(../../static/img/background_pattern.png);
 }
 
 .disrupt-light{
   background-color: white;
-  background-image: url(../static/img/background_pattern.png);
+  background-image: url(../../static/img/background_pattern.png);
 }
 
 .headingtext {
@@ -954,7 +954,7 @@ nav ul li {
 
 .primefeatures {
   
-  background-image: url(../static/img/primestatus1.png);
+  background-image: url(../../static/img/primestatus1.png);
   height: 1080px;
 }
 
