@@ -1,6 +1,12 @@
-# ZBUNKER
+<img src="zbunker/static/img/zglitch-inverted.gif" width="100%">
 
-![ZB logo](zbunker/static/img/zglitch-inverted.gif)
+[![Python Version](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
+[![Pull Requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/P0intMaN/zbunker-website/issues)
+[![GitHub issues](https://img.shields.io/github/issues/P0intMaN/zbunker-website?color=red)](https://github.com/P0intMaN/zbunker-website/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/P0intMaN/zbunker-website)](https://github.com/P0intMaN/zbunker-website/issues?q=is%3Aissue+is%3Aclosed)
+[![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UC1QZPervOHLiC4xpVnzbDFg?style=social)](https://www.youtube.com/channel/UC1QZPervOHLiC4xpVnzbDFg)
+
+
 
 ZBunker is a community run by a bunch of university students with an aim to spread awareness about **open source** and the power of **programmming**.
 
@@ -8,13 +14,13 @@ The main mode of education is through our [YouTube channel](https://www.youtube.
 
 We believe in ***free and quality education for all***.
 
-## About The Project
+## About The Project 🚀:
 
-*`zbunker-website`* project is focussed on creating an independent website dedicated to ZBunker. This website will feature all the courses, seminars, webinars and other learning resources that will be of great use for learners.
+*`zbunker-website`* project is focussed on creating an independent website dedicated to **ZBunker**. This website will feature all the courses, seminars, webinars and other learning resources that will be of great use for learners.
 
-*`zbunker-website`* uses **Flask** as the backend. Check out the [Tech Stack](#tech-stack) section to know about various tech stacks preferred and currently used for creating this website.
+*`zbunker-website`* uses **Flask** as the backend. Check out the [Tech Stack](#tech-stack-) section to know about various tech stacks preferred and currently used for creating this website.
 
-## ToDo List
+## ToDo List 📝:
 
 - [x] Create a landing page
 - [x] Create interactve, functional homepage
@@ -27,11 +33,12 @@ We believe in ***free and quality education for all***.
 - [ ] Migrate to PostgreSQL
 - [ ] Add forgot password functionality
 - [ ] Add Google reCaptcha
+- [ ] Add Payments Gateway (Instamojo or Stripe)
 - [ ] Deploy rate limit check on login/register (Security)
 - [ ] Deploy the website on a public server (Final)
 - [ ] Make Website Responsive
 
-## Tech Stack
+## Tech Stack 💻:
 
 1. [HTML](https://www.w3schools.com/html/)
 2. [CSS](https://www.w3schools.com/css/)

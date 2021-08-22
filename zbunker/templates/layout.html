@@ -10,8 +10,8 @@
     <!-- favicon -->
     <script src="https://kit.fontawesome.com/f1d715eefc.js" crossorigin="anonymous"></script>
     <!-- main.css -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='hola.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/hola.css') }}">
     
     <!-- venobox -->
     <link rel="stylesheet" href="{{ url_for('static',filename='venobox/venobox.css') }}" type="text/css" media="screen" />
@@ -30,28 +30,7 @@
   </head>
 
   <body>
-      <!-- Responsive navbar-->
-      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{{url_for('home')}}">ZBUNKER</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="{{url_for('home')}}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                </ul>
-            </div>
-            <div class="navbar-nav justify-content-end">
-              {% if current_user.is_authenticated %}
-                <a class="nav-item nav-link" href="#">New Post</a>    
-                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
-              {% else %}
-              <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
-              <button class="btn btn-outline-warning my-2 my-sm-0 ml-4" onclick="window.location.href = '/prime'">Join Prime</button>
-              {% endif %}
-            </div> 
-        </div>
-      </nav> -->
+      <!-- Navbar (condition: If title is landing, then don't show navbar) -->
       {% if title != "Landing" %}
       <header class="navbar navbar-expand-lg zbunkernav">
         <a href="{{url_for('home')}}">
@@ -73,6 +52,7 @@
             {% endif %}
             {% else %}
             <li><div class="kuk-cont"><a class="link link--kukuri" data-letters="Login" href="{{url_for('login')}}">Login</a></li></div>
+
             <!-- primebutton -->
             <div class="primebtn customheightfornav "> 
               <button class="butn butn-white butn-resp" onclick="window.open('/prime','_blank')">
@@ -88,6 +68,7 @@
         </nav>
       </header>
 
+      <!-- experimental background :p -->
       <section class="bgexp">
 
       </section>
@@ -100,7 +81,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- backtotop js -->
+    
 
     <!-- Swiper JS -->
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
