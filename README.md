@@ -30,13 +30,15 @@ We believe in ***free and quality education for all***.
 - [x] Add anti-CSRF tokens
 - [ ] Add video contents
 - [ ] Add resources
+- [ ] Create filter based gallery for courses
 - [ ] Migrate to PostgreSQL
 - [ ] Add forgot password functionality
 - [ ] Add Google reCaptcha
-- [ ] Add Payments Gateway (Instamojo or Stripe)
+- [ ] Add Donatoins Gateway (Instamojo or Stripe)
 - [ ] Deploy rate limit check on login/register (Security)
-- [ ] Deploy the website on a public server (Final)
 - [ ] Make Website Responsive
+- [ ] Deploy the website on a public server (Final)
+
 
 ## Tech Stack 💻:
 
