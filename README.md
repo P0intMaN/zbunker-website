@@ -30,18 +30,21 @@ We believe in ***free and quality education for all***.
 - [x] Add anti-CSRF tokens
 - [ ] Add video contents
 - [ ] Add resources
+- [ ] Create filter based gallery for courses
+- [ ] Add footer
 - [ ] Migrate to PostgreSQL
 - [ ] Add forgot password functionality
 - [ ] Add Google reCaptcha
-- [ ] Add Payments Gateway (Instamojo or Stripe)
+- [ ] Add Donatoins Gateway (Instamojo or Stripe)
 - [ ] Deploy rate limit check on login/register (Security)
-- [ ] Deploy the website on a public server (Final)
 - [ ] Make Website Responsive
+- [ ] Deploy the website on a public server (Final)
+
 
 ## Tech Stack 💻:
 
-1. [HTML](https://www.w3schools.com/html/)
-2. [CSS](https://www.w3schools.com/css/)
+1. [HTML](https://www.w3schools.com/html/) - A markup language for creating a webpage.
+2. [CSS](https://www.w3schools.com/css/) - Styler for HTML webpages
 3. [JavaScript](https://www.javascript.com/) - The programming language of web
 4. [Flask](https://flask.palletsprojects.com/) - Flask is a microframework for Python based on Werkzeug and Jinja 2
 5. [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) - An extension for Flask that adds support for SQLAlchemy ORM to your application.
