@@ -43,8 +43,8 @@ We believe in ***free and quality education for all***.
 
 ## Tech Stack 💻:
 
-1. [HTML](https://www.w3schools.com/html/)
-2. [CSS](https://www.w3schools.com/css/)
+1. [HTML](https://www.w3schools.com/html/) - A markup language for creating a webpage.
+2. [CSS](https://www.w3schools.com/css/) - Styler for HTML webpages
 3. [JavaScript](https://www.javascript.com/) - The programming language of web
 4. [Flask](https://flask.palletsprojects.com/) - Flask is a microframework for Python based on Werkzeug and Jinja 2
 5. [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) - An extension for Flask that adds support for SQLAlchemy ORM to your application.
