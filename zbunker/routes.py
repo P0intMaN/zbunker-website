@@ -87,6 +87,13 @@ def filter():
     return render_template("filtergrid.html", title=title)
 
 
+@app.route("/zbunkerprime")
+@app.route("/donations")
+def zbunkerprime():
+    title = "ZBunker Prime"
+    return render_template("zbunkerprime.html", title=title)
+
+
 @app.route("/learn/ethical-hacking")
 def eth():
     title = "Ethical Hacking"
