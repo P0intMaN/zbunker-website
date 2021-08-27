@@ -74,9 +74,11 @@ scndswiper.on('activeIndexChange', function(){
     
     // slide variables
     const aSlide = scndswiper.slides[scndswiper.previousIndex]
+    const currentSlide = scndswiper.slides[scndswiper.activeIndex]
+    const imageUrl = currentSlide.querySelector('.swiper-slide > img')
     const image = aSlide.querySelector('.swiper-slide > img')
     const text = image.getAttribute('data-title')
-    const url = image.getAttribute('data-url')
+    const url = imageUrl.getAttribute('data-url')
 
     // set values here:
     rightText.innerHTML = text
