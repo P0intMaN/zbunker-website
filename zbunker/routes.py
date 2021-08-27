@@ -32,7 +32,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         return redirect(url_for("login"))
-    return render_template("prime.html", title="Prime", form=form)
+    return render_template("prime.html", title="Join Prime", form=form)
 
 
 @app.route("/login", methods=["GET", "POST"])
