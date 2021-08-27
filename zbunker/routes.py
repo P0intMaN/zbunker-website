@@ -91,7 +91,10 @@ def filter():
 @app.route("/donations")
 def zbunkerprime():
     title = "ZBunker Prime"
-    return render_template("zbunkerprime.html", title=title)
+    user = User.query.all()
+    members = len(user)
+    print(user)
+    return render_template("zbunkerprime.html", title=title, members=members)
 
 
 @app.route("/learn/ethical-hacking")
