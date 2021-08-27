@@ -1,4 +1,4 @@
-{% from 'tag_cloud.html' import tagCloud() %}
+{% from 'tag_cloud.html' import tagCloud %}
 {% extends "layout.html" %}
 {% block content %}
 
@@ -139,7 +139,7 @@
                       <div class="heading" style="font-size:35px;">EXPLORE OTHERS</div>
                     </div>
 
-                    {{tagCloud()}}
+                    {{ tagCloud() }}
                     
                   </div>
                 </div>
