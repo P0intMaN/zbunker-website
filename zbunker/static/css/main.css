@@ -2154,6 +2154,24 @@ color: #00A1A9;
   
 }
 
+.below-logo{
+  top: 86.5%;
+  background-color:transparent;
+  height:5px;
+  width:90%;
+  animation: underline-up -2s ease-in-out 2s infinite both;
+}
+
+@keyframes underline-up {
+  0%{
+    top: 86.5%;
+    background-color: white;
+  }
+
+  100%{
+    top: var(--fillmarker);
+  }
+}
 
 .donation-desc{
   padding-left: 50px;
