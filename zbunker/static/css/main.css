@@ -2133,3 +2133,30 @@ color: #00A1A9;
   color:white;
   transition: 0.2s ease-in-out;
 }
+/* playlist section ends | donation section begins*/
+.community-goals{
+  display:flex;
+  align-items: center;
+}
+
+.donation-logo{
+  font-size: 1000px;
+  padding-left: 100px;
+
+}
+
+.donation-logo .letter{
+  background: linear-gradient(to top, #ec4e00 var(--fillvar), white 10%);
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 950px;
+  
+}
+
+
+.donation-desc{
+  padding-left: 50px;
+  
+}
+

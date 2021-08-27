@@ -93,8 +93,10 @@ def zbunkerprime():
     title = "ZBunker Prime"
     user = User.query.all()
     members = len(user)
-    print(user)
-    return render_template("zbunkerprime.html", title=title, members=members)
+    filler = str(90) + "%"
+    return render_template(
+        "zbunkerprime.html", title=title, members=members, filler=filler
+    )
 
 
 @app.route("/learn/ethical-hacking")
