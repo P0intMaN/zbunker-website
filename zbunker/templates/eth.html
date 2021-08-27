@@ -1,3 +1,4 @@
+{% from 'tag_cloud.html' import tagCloud %}
 {% extends "layout.html" %}
 {% block content %}
 
@@ -115,22 +116,8 @@
                       <div class="heading" style="font-size:35px;">EXPLORE OTHERS</div>
                     </div>
 
-                    <div class="tag-cloud">
-                      <div class="tags">
-                        <a href="https://www.youtube.com">Python</a>
-                        <a href="https://www.youtube.com">Ethical Hacking</a>
-                        <a href="https://www.youtube.com">Linux</a>
-                        <a href="https://www.youtube.com">Nmap</a>
-                        <a href="https://www.youtube.com">AI Basics</a>
-                        <a href="https://www.youtube.com">Git Essentials</a>
-                        <a href="https://www.youtube.com">Web Dev with Flask</a>
-                        <a href="https://www.youtube.com">Bug Bounty</a>
-                        <a href="https://www.youtube.com">Malware Dev in C++</a>
-                        <a href="https://www.youtube.com">Machine Learning</a>
-                        <a href="https://www.youtube.com">Ransomware Dev with Python</a>
-                        <a href="https://www.youtube.com">C Programming</a>
-                      </div>
-                    </div>
+                    {{ tagCloud() }}
+
                   </div>
                 </div>
 
