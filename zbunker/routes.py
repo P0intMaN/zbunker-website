@@ -92,10 +92,17 @@ def filter():
 def zbunkerprime():
     title = "ZBunker Prime"
     user = User.query.all()
+    total = 20
     members = len(user)
-    filler = str(90) + "%"
+    percentage = (members / total) * 100
+    filler = str(percentage) + "%"
+    marker = 86.5
+    if 100 - percentage < 86.5:
+        marker = str(100 - percentage) + "%"
+    else:
+        marker = str(86.5) + "%"
     return render_template(
-        "zbunkerprime.html", title=title, members=members, filler=filler
+        "zbunkerprime.html", title=title, members=members, filler=filler, marker=marker
     )
 
 
