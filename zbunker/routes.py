@@ -102,7 +102,12 @@ def zbunkerprime():
     else:
         marker = str(86.5) + "%"
     return render_template(
-        "zbunkerprime.html", title=title, members=members, filler=filler, marker=marker
+        "zbunkerprime.html",
+        title=title,
+        members=members,
+        filler=filler,
+        marker=marker,
+        total=total,
     )
 
 

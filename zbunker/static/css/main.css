@@ -2136,7 +2136,7 @@ color: #00A1A9;
 /* playlist section ends | donation section begins*/
 .community-goals{
   display:flex;
-  align-items: center;
+  
 }
 
 .donation-logo{
@@ -2174,7 +2174,7 @@ color: #00A1A9;
 }
 
 .donation-desc{
-  padding-left: 50px;
-  
+  padding: 80px 50px;
+
 }
 
