@@ -20,7 +20,7 @@ We believe in ***free and quality education for all***.
 
 *`zbunker-website`* uses **Flask** as the backend. Check out the [Tech Stack](#tech-stack-) section to know about various tech stacks preferred and currently used for creating this website.
 
-## ToDo List 📝:
+## ToDo List 📝
 
 - [x] Create a landing page
 - [x] Create interactve, functional homepage
@@ -40,8 +40,15 @@ We believe in ***free and quality education for all***.
 - [ ] Make Website Responsive
 - [ ] Deploy the website on a public server (Final)
 
+## Getting Started / Viewing Project
 
-## Tech Stack 💻:
+- ### Install Python
+
+    This Project breathes and lives on Python. You need to have Python in your system to view this project. Head over to the [official website](https://www.python.org) and download the latest version.
+
+    If you want to learn Python, you can refer to this [basic course](https://www.youtube.com/playlist?list=PLbsliZj8JocLu8b_13sVPZUciUBaLpMVw) 
+
+## Tech Stack 💻
 
 1. [HTML](https://www.w3schools.com/html/) - A markup language for creating a webpage.
 2. [CSS](https://www.w3schools.com/css/) - Styler for HTML webpages
