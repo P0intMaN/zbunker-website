@@ -14,7 +14,7 @@ The main mode of education is through our [YouTube channel](https://www.youtube.
 
 We believe in ***free and quality education for all***.
 
-## About The Project 🚀:
+## About The Project 🚀
 
 *`zbunker-website`* project is focussed on creating an independent website dedicated to **ZBunker**. This website will feature all the courses, seminars, webinars and other learning resources that will be of great use for learners.
 
