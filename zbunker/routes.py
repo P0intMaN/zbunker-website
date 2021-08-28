@@ -145,3 +145,9 @@ def mongo():
 def linux():
     title = "Linux"
     return render_template("linux.html", title=title)
+
+
+@app.route("/learn/c-programming")
+def c():
+    title = "C Programming"
+    return render_template("c.html", title=title)
