@@ -2174,7 +2174,21 @@ color: #00A1A9;
 }
 
 .donation-desc{
-  padding: 80px 50px;
-
+  padding: 50px 50px 40px 10px;
 }
 
+.how-to-donate{
+  display:flex;
+  justify-content: center;
+}
+
+.how-to-donate .donate-links{
+  padding:0px 20px;
+}
+
+.how-to-donate a{
+  
+  color:gray;
+  font-style: italic;
+  font-size:22px;
+}
