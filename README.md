@@ -42,11 +42,31 @@ We believe in ***free and quality education for all***.
 
 ## Getting Started / Viewing Project
 
-- ### Install Python
+- ### Installing Python
 
-    This Project breathes and lives on Python. You need to have Python in your system to view this project. Head over to the [official website](https://www.python.org) and download the latest version.
+    This Project breathes and lives on **Python**. You need to have Python in your system to view this project. Head over to the [official website](https://www.python.org) and download the latest version. You can also watch this video about [installing Python](https://youtu.be/MGhDEeIkarg)
 
-    If you want to learn Python, you can refer to this [basic course](https://www.youtube.com/playlist?list=PLbsliZj8JocLu8b_13sVPZUciUBaLpMVw) 
+    If you want to learn Python, you can refer to this [basic Python course](https://www.youtube.com/playlist?list=PLbsliZj8JocLu8b_13sVPZUciUBaLpMVw)
+
+- ### Installing Dependencies
+
+    The packages and modules you need to run *`zbunker-website`* is listed in the `requirements.txt` file. You can install them via this command:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+- ### Running the Project
+
+    Open up your terminal (cmd in windows) and navigate inside the Project directory: `zbunker-website/`. Then simply run this command:
+
+    ```bash
+    python run.py
+    ```
+
+    This would spit out some verbose (simply ignore them). You only need to look for something similar to `Running on http://127.0.0.1:xxxx` where xxx is port no. Copy this code and paste it on your web browser.
+
+     Voila! ZBunker website is up and running!
 
 ## Tech Stack 💻
 
