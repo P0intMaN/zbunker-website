@@ -87,8 +87,8 @@ def filter():
     return render_template("filtergrid.html", title=title)
 
 
-@app.route("/zbunkerprime")
-@app.route("/donations")
+@app.route("/support-zbunker")
+@app.route("/donate")
 def zbunkerprime():
     title = "ZBunker Prime"
     user = User.query.all()
@@ -102,7 +102,12 @@ def zbunkerprime():
     else:
         marker = str(86.5) + "%"
     return render_template(
-        "zbunkerprime.html", title=title, members=members, filler=filler, marker=marker
+        "zbunkerprime.html",
+        title=title,
+        members=members,
+        filler=filler,
+        marker=marker,
+        total=total,
     )
 
 
