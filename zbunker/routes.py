@@ -87,8 +87,8 @@ def filter():
     return render_template("filtergrid.html", title=title)
 
 
-@app.route("/zbunkerprime")
-@app.route("/donations")
+@app.route("/support-zbunker")
+@app.route("/donate")
 def zbunkerprime():
     title = "ZBunker Prime"
     user = User.query.all()
