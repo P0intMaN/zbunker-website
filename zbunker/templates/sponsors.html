@@ -1,6 +1,13 @@
 {% extends 'layout.html' %}
 {% block content %}
     <div class="container-fluid p-0 secondary">
-        <div class="heading">this is sponsors page</div>
+        <div class="heading center large-heading">this is a dummy sponsors page</div>
+        <div class="heading med-heading">sponsors retrieved from database should appear below: (queried {{sponsors|length}} users)</div>
+
+        {% for member in sponsors %}
+        <div class="heading sm-heading original">{{member}}</div>
+        {% endfor %}
+
+    <div class="heading med-heading ">the above users will be gone when we put this into production. Because the DB will be new (probably Postgres)</div>
     </div>
 {% endblock %}
