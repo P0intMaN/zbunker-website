@@ -111,6 +111,12 @@ def zbunkerprime():
     )
 
 
+@app.route("/sponsors")
+def sponsor():
+    title = "Sponsors"
+    return render_template("sponsors.html", title=title)
+
+
 @app.route("/learn/ethical-hacking")
 def eth():
     title = "Ethical Hacking"
