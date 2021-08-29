@@ -22,7 +22,7 @@
                     help us make it happen
                 </div>
                 <div class="how-to-donate">
-                    <a href="#how-to-contribute" class="donate-links">how to contribute?</a>
+                    <a href="#how-to-contribute" class="donate-links">how to support?</a>
                     <a href="{{url_for('sponsor')}}" class="donate-links">our Sponsors & Members</a>
                 </div>
             </div>
@@ -30,16 +30,74 @@
         
         <!-- Contribution Guide -->
         <div class="contribution-guide" style="padding-top: 80px;">
+            
+            <!-- heading -->
             <div class="topic center">
                 <div class="heading center underline un-white" style="display:inline-block; font-size:80px;" id="how-to-contribute">
                     Support ZBunker community
                 </div>
+            </div>
+
+            <!-- content -->
+            <div class="support-us secondary">
                 
+                <!-- youtube card -->
+                <div class="youtube-support">
+                    <div class="support-card support-card-top">
+                        <div class="back-setting"></div>
+                        <div class="front-setting">
+                            <!-- logo -->
+                            <div class="yt-logo">
+                                <a href="https://www.youtube.com/channel/UC1QZPervOHLiC4xpVnzbDFg" target="_blank"><i class="fa fa-youtube-play fa-10x icon-3d"></i></a>
+                            </div>
+                            
+                            <!-- description -->
+                            <div class="card-description">
+                                <div class="heading underline un-white">zbunker youtube channel</div>
+                                
+                                <div class="heading sm-heading grey">ZBunker is a community run by a bunch of university 
+                                    students with an aim to spread awareness about open source and the power of 
+                                    programmming
+                                </div>
+
+                                <div class="heading med-heading pt-5 original">support us. make an impact.</div>
+                            </div>
+                        </div>       
+                    </div>  
+                </div>
+
+                <!-- prime card -->
+                <div class="prime-support">
+                    <div class="support-card support-card-bottom">
+                        <div class="back-setting back-setting-primary"></div>
+                        <div class="front-setting">
+                            <!-- logo -->
+                            <div class="prime-logo">
+                                <a href="{{url_for('register')}}" target="_blank" class="icon-3d">PR</a>
+                            </div>
+                            
+                            <!-- description -->
+                            <div class="card-description">
+                                <div class="heading underline un-white">zbunker prime membership</div>
+                                
+                                <div class="heading sm-heading grey">ZBunker Prime is a donation-cum-membership scheme. By being a
+                                    Prime member, you are donating to the ZBunker Community. More about it in the prime section.
+                                </div>
+
+                                <div class="heading med-heading pt-5 original">support us. make an impact.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
 
             </div>
+            <!-- support us ends -->
             
         </div>
+        <!-- contribution-guide ends -->
 
     </div>
+    <!-- entire wrapper -->
 
 {% endblock %}
