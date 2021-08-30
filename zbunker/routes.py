@@ -91,16 +91,19 @@ def filter():
 @app.route("/donate")
 def zbunkerprime():
     title = "ZBunker Prime"
+
     user = User.query.all()
     total = 20
     members = len(user)
     percentage = (members / total) * 100
     filler = str(percentage) + "%"
     marker = 86.5
+
     if 100 - percentage < 86.5:
         marker = str(100 - percentage) + "%"
     else:
         marker = str(86.5) + "%"
+
     return render_template(
         "zbunkerprime.html",
         title=title,
@@ -109,6 +112,19 @@ def zbunkerprime():
         marker=marker,
         total=total,
     )
+
+
+@app.route("/sponsors")
+def sponsor():
+    title = "Sponsors"
+
+    users = User.query.all()
+    sponsors = []
+
+    for user in users:
+        sponsors.append(user.username)
+
+    return render_template("sponsors.html", title=title, sponsors=sponsors)
 
 
 @app.route("/learn/ethical-hacking")

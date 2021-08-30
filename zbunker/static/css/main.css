@@ -577,12 +577,20 @@ nav ul li {
   color: #1f1f1f;
 }
 
+.red-color{
+  color:red;
+}
+
 .white{
   color: white;
 }
 
 .dark{
   color:black;
+}
+
+.grey{
+  color:grey;
 }
 
 .ssecondary{
@@ -2191,4 +2199,72 @@ color: #00A1A9;
   color:gray;
   font-style: italic;
   font-size:22px;
+}
+/* donation section ends | support-us section begins*/
+/* .support-us{
+  display:flex;
+  justify-content: center;
+} */
+
+.support-card{
+  display:flex;
+  padding-top:200px;
+  padding-bottom: 80px;
+}
+
+.support-card-top{
+  padding-right:200px;
+  padding-left:200px;
+}
+
+.support-card-bottom{
+  padding-top:80px;
+  padding-left:200px;
+  padding-bottom: 120px;
+}
+
+.back-setting{
+  height:480px;
+  width:600px;
+  background-color: #C70102;
+}
+
+.back-setting-primary{
+  background-color: #ec4e00;
+}
+
+.front-setting{
+  height:400px;
+  width:1000px;
+  background-color: black;
+  position:absolute;
+  margin-left:200px;
+  margin-top:40px;
+}
+
+.yt-logo{
+  font-size:40px;
+  position:absolute;
+  z-index:2;
+  margin-left:-150px;
+  margin-top: -20px;
+}
+
+.card-description{
+  padding-left:350px;
+}
+
+.prime-logo{
+  font-size: 450px;
+  font-weight: 700;
+  position:absolute;
+  letter-spacing: -30px;
+  z-index:2;
+  margin-left:-150px;
+  margin-top: -130px;
+}
+
+.prime-logo a{
+  text-decoration: none;
+  color:white;
 }
