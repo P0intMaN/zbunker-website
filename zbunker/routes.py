@@ -81,7 +81,7 @@ def basic():
     return render_template("basic.html", title=title)
 
 
-@app.route("/filtergrid")  # change this
+@app.route("/learn")  # change this
 def filter():
     title = "Filter"
     return render_template("filtergrid.html", title=title)
