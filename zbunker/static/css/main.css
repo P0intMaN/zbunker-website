@@ -1068,6 +1068,10 @@ nav ul li {
   --move-final: calc(-50% + var(--offset));
 }
 
+.marqueebody .marqueee .marqueee-prime{
+  --offset: 10vw;
+}
+
 .marqueebody .marqueee__inner {
   width: -webkit-fit-content;
   width: -moz-fit-content;
