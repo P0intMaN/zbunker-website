@@ -109,7 +109,7 @@ def zbunkerprime():
             marker = str(86.5) + "%"
 
     return render_template(
-        "zbunkerprime.html",
+        "donate.html",
         title=title,
         members=members,
         filler=filler,
