@@ -2,10 +2,13 @@
 {% block content %}
     <div class="container-fluid p-0 secondary" style="min-height: 100vh;">
         
+        <!-- backdrop -->
         <div class="back-drop">
             <div class="topic">
-                <div class="heading center dark reveal-text" style="font-size: 310px;">driving force</div> 
+                <div class="heading center dark reveal-no-effect" style="font-size: 310px;">driving force</div> 
             </div>
+
+            <!-- sponsors list -->
             <div class="front-drop secondary">
                 <div class="sponsors">
                     {% for member in sponsors %}
@@ -15,9 +18,17 @@
                 
             </div>
         </div>
+
+        <!-- sponsors list (backdrop) -->
         {% for member in sponsors %}
         <span class="heading sub-heading gray">{{member}}</span>
         {% endfor %}
-    
+
     </div>
+
+    <!-- bottom-to-top button -->
+    <div class="enclose bordar black" id="bottomtoup" ><i class="fas fa-caret-up"></i></div>
+
+    <!-- script for bottom-to-top button -->
+    <script src="{{ url_for('static', filename='js/bottomtoup.js') }}" ></script>
 {% endblock %}
