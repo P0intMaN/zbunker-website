@@ -427,15 +427,24 @@ nav ul li {
 .vertical-about{
   writing-mode: vertical-lr;
   text-transform: uppercase;
-  color: white;
   font-weight: 700;
   
 }
-/* .left-right{
+
+.vertical-text-large{
   writing-mode: vertical-lr;
-  text-orientation:sideways-right;
-  color:red;
-} */
+  text-transform: uppercase;
+  font-weight: 700;
+  position:absolute;
+  right:0;
+}
+
+.vertical-text{
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  color:white;
+  font-weight: 700;
+}
 
 .extralarge{
   font-size:300px;
@@ -1066,6 +1075,10 @@ nav ul li {
   --offset: 20vw;   /* CHANGE IT TO 20vw if any problem persists */
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(-50% + var(--offset));
+}
+
+.marqueebody .marqueee .marqueee-prime{
+  --offset: 10vw;
 }
 
 .marqueebody .marqueee__inner {
@@ -2201,10 +2214,10 @@ color: #00A1A9;
   font-size:22px;
 }
 /* donation section ends | support-us section begins*/
-/* .support-us{
-  display:flex;
-  justify-content: center;
-} */
+.support-us{
+  position: relative;
+  height: 1600px;
+} 
 
 .support-card{
   display:flex;
@@ -2235,7 +2248,7 @@ color: #00A1A9;
 
 .front-setting{
   height:400px;
-  width:1000px;
+  width:1200px;
   background-color: black;
   position:absolute;
   margin-left:200px;

@@ -81,7 +81,7 @@ def basic():
     return render_template("basic.html", title=title)
 
 
-@app.route("/filtergrid")  # change this
+@app.route("/learn")  # change this
 def filter():
     title = "Filter"
     return render_template("filtergrid.html", title=title)
@@ -90,22 +90,26 @@ def filter():
 @app.route("/support-zbunker")
 @app.route("/donate")
 def zbunkerprime():
-    title = "ZBunker Prime"
+    title = "Support Us"
 
+    # get the no of users and calc the percentage (short goal)
     user = User.query.all()
-    total = 20
+    total = 20  #  the target goal
     members = len(user)
     percentage = (members / total) * 100
     filler = str(percentage) + "%"
     marker = 86.5
 
-    if 100 - percentage < 86.5:
-        marker = str(100 - percentage) + "%"
+    if percentage > 100:
+        marker = "0%"
     else:
-        marker = str(86.5) + "%"
+        if 100 - percentage < 86.5:
+            marker = str(100 - percentage) + "%"
+        else:
+            marker = str(86.5) + "%"
 
     return render_template(
-        "zbunkerprime.html",
+        "donate.html",
         title=title,
         members=members,
         filler=filler,
