@@ -1,14 +1,23 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <div class="container-fluid p-0 secondary">
-        <div class="heading center large-heading">this is a dummy sponsors page</div>
-        <div class="heading center large-heading">the driving force (extra large font)</div>
-        <div class="heading med-heading">sponsors retrieved from database should appear below: (queried {{sponsors|length}} users)</div>
-
+    <div class="container-fluid p-0 secondary" style="min-height: 100vh;">
+        
+        <div class="back-drop">
+            <div class="topic">
+                <div class="heading center dark reveal-text" style="font-size: 310px;">driving force</div> 
+            </div>
+            <div class="front-drop secondary">
+                <div class="sponsors">
+                    {% for member in sponsors %}
+                        <span>{{ member }}</span>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
         {% for member in sponsors %}
-        <div class="heading sm-heading original">{{member}}</div>
+        <span class="heading sub-heading gray">{{member}}</span>
         {% endfor %}
-
-    <div class="heading med-heading ">the above users will be gone when we put this into production. Because the DB will be new (probably Postgres)</div>
+    
     </div>
 {% endblock %}

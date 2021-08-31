@@ -551,6 +551,18 @@ nav ul li {
   font-size:90px;
 }
 
+.xl-heading{
+  font-size: 120px;
+}
+
+.xxl-heading{
+  font-size: 220px;
+}
+
+.xxxl-heading{
+  font-size:300px;
+}
+
 .no-caps{
   text-transform: lowercase;
 }
@@ -2280,4 +2292,54 @@ color: #00A1A9;
 .prime-logo a{
   text-decoration: none;
   color:white;
+}
+/* support-us section ends | sponsor section begins  */
+.back-drop{
+  position:relative;
+}
+.front-drop{
+  margin-top:-9%;
+  left:10%;
+  position: absolute;
+  max-height: 19999px;
+  width: 1536px;
+  border: 2px solid rgb(45,45,45);
+  animation: dropdown 5s ease-in-out;
+}
+
+@keyframes dropdown {
+  0%{
+    max-height:0px;
+  }
+
+  100%{
+    max-height: 19999px;
+  }
+}
+
+.front-drop .sponsors{
+  padding:50px 50px;
+}
+
+.front-drop span{
+
+  font-size: 25px;
+  text-transform: uppercase;
+  padding:0px 50px;
+  color:white;
+  animation: appear 2s ease-in-out;
+}
+
+@keyframes appear {
+  0%{
+    opacity:0;
+  }
+
+  50%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity:1;
+  }
 }
