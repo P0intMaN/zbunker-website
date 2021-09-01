@@ -3,21 +3,3 @@ repos:
     rev: 21.7b0
     hooks:
     - id: black
-      
-# -   repo: https://github.com/pycqa/flake8
-#     rev: 3.9.2
-#     hooks:
-#     - id: flake8
-
--   repo: https://github.com/Yelp/detect-secrets
-    rev: v1.1.0
-    hooks:
-    - id: detect-secrets
-      args: ['--exclude-files', '.*\.html$']
-      args: ['--exclude-lines', 'SECRET_KEY=3e45d03423f3eeea6c40a617fab753e19adc7adb']
-      name: Detect secrets
-      description: Detects high entropy strings that are likely to be passwords.
-      entry: detect-secrets-hook
-      language: python
-      # for backward compatibility
-      files: .*
