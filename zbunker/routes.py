@@ -46,7 +46,9 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user and user.password == form.password.data:
             login_user(user, remember=form.remMe.data)
-            nextPage = request.args.get("next")
+            nextPage = request.args.get(
+                "next"
+            )  # a feature to route to the next url (for login_required only)
             return redirect(nextPage) if nextPage else redirect(url_for("home"))
 
         else:
