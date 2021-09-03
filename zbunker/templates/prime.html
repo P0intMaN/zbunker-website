@@ -48,7 +48,7 @@
         </div>
 
         <!-- The content half -->
-        <div class="col-md-6 pakki">
+        <div class="col-md-6 pakki" id="prime-anchor">
             <div class="login d-flex align-items-center py-5">
                 <div class="container">
                     <div class="row">
@@ -200,4 +200,11 @@
 
 <script src="{{ url_for('static', filename='js/particle.js') }}"></script>
 
+<!-- script to handle anchor -->
+{% if anchor==1 %}
+<script>
+ window.location.hash="prime-anchor";
+ 
+ </script>
+{% endif %}
 {% endblock %}

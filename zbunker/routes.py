@@ -23,16 +23,23 @@ def register():
     if current_user.is_authenticated:
         return redirect(url_for("home"))
 
-    if form.validate_on_submit():
-        user = User(
-            username=form.username.data,
-            email=form.email.data,
-            password=form.password.data,
-        )
-        db.session.add(user)
-        db.session.commit()
-        return redirect(url_for("login"))
+    if request.method == "POST":
+        if form.validate_on_submit():
+            user = User(
+                username=form.username.data,
+                email=form.email.data,
+                password=form.password.data,
+            )
+            db.session.add(user)
+            db.session.commit()
+            return redirect(url_for("login"))
+        else:
+            return render_template(
+                "prime.html", anchor=1, title="Join Prime", form=form
+            )
+
     return render_template("prime.html", title="Join Prime", form=form)
+    # return redirect(url_for('register', _anchor='prime-anchor'))
 
 
 @app.route("/login", methods=["GET", "POST"])
