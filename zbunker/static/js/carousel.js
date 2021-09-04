@@ -1,3 +1,5 @@
+// Learning Source: Swiper js documentation
+
 var options = {
   loop: true,
   speed: 1000,

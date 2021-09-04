@@ -133,6 +133,8 @@ function callbackFunc(entries){
 
 }
 
+// InteresectionObserver from StackOverflow
+
 let newoptions = {
   root: null,
   rootMargin: '0px',

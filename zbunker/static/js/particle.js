@@ -1,7 +1,5 @@
-/*!
- * Particleground
- *
- */
+// Source Codepen
+
 document.addEventListener('DOMContentLoaded', function () {
     particleground(document.getElementById('particles'), {
       dotColor: 'white',

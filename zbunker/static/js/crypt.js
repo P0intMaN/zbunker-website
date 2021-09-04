@@ -1,8 +1,7 @@
+// Source Codepen
 
-// ——————————————————————————————————————————————————
-// TextScramble
-// ——————————————————————————————————————————————————
 
+// text scramble
 class TextScramble {
 constructor(el) {
     this.el = el
@@ -57,9 +56,6 @@ randomChar() {
 }
 }
 
-// ——————————————————————————————————————————————————
-// Example
-// ——————————————————————————————————————————————————
 
 const el = document.querySelector('.crypt-heading')
 const elinside = el.getAttribute('data-item')
