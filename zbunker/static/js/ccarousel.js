@@ -1,3 +1,5 @@
+// Learning Source: Swiper js documentation
+
 var options = {
     loop: true,
     slidesPerView: 1.5,
