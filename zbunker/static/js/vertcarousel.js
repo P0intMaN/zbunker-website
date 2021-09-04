@@ -1,3 +1,6 @@
+// Learning Source: Swiper js documentation
+
+// horizontal slider
 var options = {
     loop: true,
     direction: 'vertical',
@@ -40,7 +43,7 @@ var options = {
 };
 
 
-
+// vertical slider
 var scndswiper = new Swiper('.gallery-main', options)
 
 
