@@ -1,3 +1,5 @@
+// learning source StackOverflow
+
 let aboutoptions = {
     root: null,
     rootMargin: '0px',
