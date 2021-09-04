@@ -521,6 +521,12 @@ nav ul li {
   text-transform: uppercase;
 }
 
+.topic-heading{
+  font-size:90px;
+  text-align: center;
+  padding-top:80px;
+}
+
 .center{
   text-align: center;
 }
