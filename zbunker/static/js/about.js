@@ -27,6 +27,7 @@ let aboutoptions = {
   }
 
 
+// different intersection observer
   let anotheraboutobserver = new IntersectionObserver(callbackfun, aboutoptions);
   let anotheraboutobserved = document.querySelector('.catch-me');
   elementtrans = document.querySelectorAll('.below-abouty')
