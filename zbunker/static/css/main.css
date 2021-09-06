@@ -2349,3 +2349,24 @@ color: #00A1A9;
     opacity:1;
   }
 }
+/* sponsor section ends | grid gallery section begins  */
+.filter-menu{
+  display:flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+.filter-category{
+  text-transform: uppercase;
+  font-size: 25px;
+  color:white;
+  padding: 0 40px;
+  font-weight: 500;
+}
+.filter-link:hover{
+  color:#ec4e00;
+  transition: color 0.4s;
+  cursor: pointer;
+}
+.filter-active{
+  color: #ec4e00;
+}
