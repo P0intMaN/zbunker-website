@@ -2411,3 +2411,16 @@ color: #00A1A9;
   color: #ec4e00;
   transition: color 0.3s;
 }
+.copyright{
+  color: gray;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 80px;
+}
+.copyright::before{
+  content: 'copyright © ';
+}
+.copyright::after{
+  content: '. all rights reserved.'
+}
