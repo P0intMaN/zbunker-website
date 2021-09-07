@@ -2370,3 +2370,44 @@ color: #00A1A9;
 .filter-active{
   color: #ec4e00;
 }
+/* grid gallery section ends | footer section begins */
+.footer-cover{
+  padding-top: 150px;
+}
+.primary-footer-section{
+  padding: 95px 0px 60px;
+  border-top: 2px solid #ec4e00;
+}
+.footer-tagline{
+  margin-top: -30px;
+  text-align: center;
+  color: white;
+}
+.tagline{
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+.footer-nav-cover{
+  padding-top: 50px;
+}
+.footer-nav{
+  display:flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+.footer-nav-item{
+  text-transform: uppercase;
+  font-size: 20px;
+  color:white;
+  padding: 0 50px;
+  font-weight: 700;
+}
+.footer-nav-item a{
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s
+}
+.footer-nav-item a:hover{
+  color: #ec4e00;
+  transition: color 0.3s;
+}
