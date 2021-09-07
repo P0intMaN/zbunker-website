@@ -1,3 +1,4 @@
+{% from 'footer.html' import footer %}
 {% extends 'layout.html' %}
 {% block content %}
     <div class="container-fluid p-0 secondary" style="min-height: 100vh;">
@@ -24,7 +25,11 @@
         <span class="heading sub-heading gray">{{member}}</span>
         {% endfor %}
 
+        <!-- footer-section -->
+        {{ footer() }}
+
     </div>
+    <!-- main container ends -->
 
     <!-- bottom-to-top button -->
     <div class="enclose bordar black" id="bottomtoup" ><i class="fas fa-caret-up"></i></div>
