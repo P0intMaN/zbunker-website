@@ -1,11 +1,15 @@
+{% from 'footer.html' import footer %}
 {% extends  "layout.html" %}
 {% block content %}
 
     <div class="container-fluid black pl-0">
+
+        <!-- topic -->
         <div class="topic-heading">
             <div class="heading large-heading">this is filtergrid page</div>
         </div>
 
+        <!-- filter menu -->
         <div class="filter-menu">
 
             <div class="filter-menu-item">
@@ -37,7 +41,12 @@
             </div>
 
         </div>
-        
+        <!-- filter menu ends -->
+
+        <!-- footer-section -->
+        {{ footer() }}
+
     </div>
+    <!-- main container ends -->
 
 {% endblock %}
