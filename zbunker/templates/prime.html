@@ -1,3 +1,4 @@
+{% from 'footer.html' import footer %}
 {% extends "layout.html" %}
 {% block content %}
 
@@ -127,14 +128,16 @@
                             </form>
                         </div>
                     </div>
-                </div><!-- End -->
+                </div><!-- Form wrapper End -->
 
             </div>
-        </div><!-- End -->
+        </div><!-- Content half End -->
     </div>
 </div>
+<!-- form section main container ends -->
 
-<div class="container-fluid pl-0 pr-0">
+<!-- testimonial main container -->
+<div class="container-fluid pl-0 pr-0 black">
     <div class="endprime">
         <div class="endtext heading center  ">
             <div class="txt underline un-white" style="display: inline;">
@@ -142,6 +145,7 @@
             </div>
         </div>
 
+        <!-- testimonials -->
         <div class="prime-members">
             <div id="carouselExampleSlidesOnly" class="carousel slide center" data-ride="carousel" style="padding-top: 100px;">
                 <div class="carousel-inner">
@@ -195,8 +199,14 @@
                 </div>
             </div>
         </div>
+        <!-- testimonials ends -->
     </div>
+
+    <!-- footer-section -->
+    {{ footer() }}
+
 </div>
+<!-- testimonial main container ends -->
 
 <script src="{{ url_for('static', filename='js/particle.js') }}"></script>
 

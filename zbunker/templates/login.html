@@ -1,3 +1,4 @@
+{% from 'footer.html' import footer %}
 {% extends "layout.html" %}
 {% block content %}
 
@@ -75,8 +76,15 @@
                 </div><!-- End -->
 
             </div>
-        </div><!-- End -->
+        </div><!-- Content half End -->
     </div>
+    <!-- row end -->
+</div>
+<!-- main container ends -->
+
+<div class="container-fluid p-0 secondary">
+    <!-- footer-section -->
+    {{ footer() }}
 </div>
 
 {% endblock %}
