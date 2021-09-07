@@ -1,3 +1,4 @@
+{% from 'footer.html' import footer %}
 {% from 'tag_cloud.html' import tagCloud %}
 {% extends "layout.html" %}
 {% block content %}
@@ -170,6 +171,9 @@
           <!-- inner container end -->
         </div>        
         <!--container end  -->
+
+        {{ footer() }}
+
     </div>
     <!-- main container end -->
 
