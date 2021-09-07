@@ -2422,5 +2422,5 @@ color: #00A1A9;
   content: 'copyright © ';
 }
 .copyright::after{
-  content: '. all rights reserved.'
+  content: ' | all rights reserved.'
 }
