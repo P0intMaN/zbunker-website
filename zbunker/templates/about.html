@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
     <div class="container-fluid secondary pl-0" >
+        <!-- about content -->
         <div class="beginning-about" >
             <div class="catch-me" style="position: absolute;background-color:transparent; height:550px;width:100%;bottom:0;"></div>
             <div class="vertical-about left-right" >
@@ -38,7 +39,9 @@
                     
                 </p>
             </div>
-        </div>    
+        </div>
+        <!-- about content ends  -->
     </div>
+    <!-- main container ends -->
     <script src="{{ url_for('static', filename='js/about.js') }}" ></script>
 {% endblock %}
