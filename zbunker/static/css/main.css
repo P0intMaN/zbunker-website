@@ -620,6 +620,10 @@ nav ul li {
   color:grey;
 }
 
+.secondary-color{
+  color: #161616;
+}
+
 .ssecondary{
   background-color: #1D1D1D;
 }
@@ -2354,6 +2358,7 @@ color: #00A1A9;
   display:flex;
   padding-top: 50px;
   justify-content: center;
+  align-items: center;
 }
 .filter-category{
   text-transform: uppercase;
@@ -2367,8 +2372,30 @@ color: #00A1A9;
   transition: color 0.4s;
   cursor: pointer;
 }
+.clear-results{
+  height:50px;
+  width: 210px;
+  display: grid;
+  background-color: #161616;
+  place-items: center;
+  transition: 0.3s;
+}
+
 .filter-active{
   color: #ec4e00;
+}
+.gallery{
+  padding:80px 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imageBox{
+  border: 2px solid #1D1D1D;
+  position: relative;
+  margin: 20px;
+}
+.imageBox img{
+  width: 490px;
 }
 /* grid gallery section ends | footer section begins */
 .footer-cover{

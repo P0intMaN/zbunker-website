@@ -13,35 +13,56 @@
         <div class="filter-menu">
 
             <div class="filter-menu-item">
-                <div class="filter-category"><div class="filter-link">All</div></div>
+                <div class="filter-category"><div class="filter-link" data-filter="filter-all">All</div></div>
             </div>
 
             <div class="filter-menu-item">
-                <div class="filter-category"><div class="filter-link">Open Source</div></div>
+                <div class="filter-category"><div class="filter-link" data-filter="filter-prog">Programming</div></div>
             </div>
 
             <div class="filter-menu-item">
-                <div class="filter-category"><div class="filter-link">Programming</div></div>
+                <div class="filter-category"><div class="filter-link" data-filter="filter-dev">Development</div></div>
             </div>
 
             <div class="filter-menu-item">
-                <div class="filter-category"><div class="filter-link">Development</div></div>
+                <div class="filter-category"><div class="filter-link" data-filter="filter-cyber">Cybersecurity</div></div>
             </div>
 
             <div class="filter-menu-item">
-                <div class="filter-category"><div class="filter-link">Cybersecurity</div></div>
+                <div class="filter-category"><div class="filter-link" data-filter="filter-fund">Fundamentals</div></div>
             </div>
 
             <div class="filter-menu-item">
-                <div class="filter-category"><div class="filter-link">Fundamentals</div></div>
+                <div class="filter-category"><div class="filter-link" data-filter="filter-oth">Others</div></div>
             </div>
 
             <div class="filter-menu-item">
-                <div class="filter-category"><div class="filter-link">Others</div></div>
+                <div class="filter-category"><div class="filter-link clear-results" data-filter="filter-clr">CLEAR RESULTS</div></div>
             </div>
 
         </div>
         <!-- filter menu ends -->
+
+        <div class="gallery">
+            <div class="imageBox filter-fund">
+                <img src="../static/img/ai-fade.png">
+            </div>
+            <div class="imageBox filter-dev">
+                <img src="../static/img/mongo-fade.png">
+            </div>
+            <div class="imageBox filter-dev">
+                <img src="../static/img/git-fade.png">
+            </div>
+            <div class="imageBox filter-dev">
+                <img src="../static/img/linuxfade.png">
+            </div>
+            <div class="imageBox filter-cyber">
+                <img src="../static/img/nmap-fade.jpg">
+            </div>
+            <div class="imageBox filter-prog">
+                <img src="../static/img/emergingpython.png">
+            </div>
+        </div>
 
         <!-- footer-section -->
         {{ footer() }}
@@ -49,4 +70,8 @@
     </div>
     <!-- main container ends -->
 
+    <!-- Explicitly calling JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Filter script -->
+    <script src="../static/js/filtergrid.js"></script>
 {% endblock %}
