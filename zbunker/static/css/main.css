@@ -620,6 +620,10 @@ nav ul li {
   color:grey;
 }
 
+.secondary-color{
+  color: #161616;
+}
+
 .ssecondary{
   background-color: #1D1D1D;
 }
@@ -2370,6 +2374,20 @@ color: #00A1A9;
 .filter-active{
   color: #ec4e00;
 }
+.gallery{
+  padding:80px 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imageBox{
+  border: 2px solid #1D1D1D;
+  position: relative;
+  margin: 20px;
+}
+.imageBox img{
+  width: 490px;
+}
+
 /* grid gallery section ends | footer section begins */
 .footer-cover{
   padding-top: 150px;
