@@ -622,6 +622,9 @@ nav ul li {
   font-weight: 700;
 }
 
+.italics{
+  font-style: italic;
+}
 /* colors, bgcolors, background colors */
 
 .original{
@@ -2479,4 +2482,16 @@ color: #00A1A9;
 }
 .copyright::after{
   content: ' | all rights reserved.'
+}
+/* footer section ends | contact us section begins */
+.right-contact{
+  padding-left: 600px;
+}
+.right-contact-content{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 140px;
+}
+.shift-done{
+  animation: slide 0.5s cubic-bezier(0.86, 0, 0.07, 0.995);
 }
