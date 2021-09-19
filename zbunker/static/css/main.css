@@ -387,6 +387,35 @@ nav ul li {
   animation: slide 1.2s ease-in-out;
 }
 
+.rise-up{
+  animation: rise-up 1.2s cubic-bezier(0.86, 0, 0.07, 0.995);
+}
+
+.rise-down{
+  animation: rise-down 1.2s cubic-bezier(0.86, 0, 0.07, 0.995);
+}
+
+@keyframes rise-up {
+  
+  0%{
+    transform: translateY(150px);
+    
+  }
+  100%{
+    transform: translateY(0px);
+  }
+
+}
+
+@keyframes rise-down{
+  0%{
+    transform: translateY(-150px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
 .herocontainer .right-to-left {
   animation: slide-left 1.4s ease-in-out;
 }
