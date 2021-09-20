@@ -2484,14 +2484,48 @@ color: #00A1A9;
   content: ' | all rights reserved.'
 }
 /* footer section ends | contact us section begins */
+.contact{
+  position: relative;
+}
 .right-contact{
+  position:relative;
   padding-left: 600px;
 }
 .right-contact-content{
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px 140px;
+  position:absolute;
+  top:60%;
+  right:0;
+}
+.left-contact{
+  position:relative;
+}
+.left-contact-content{
+  position: absolute;
+  top:60%;
+  left:0;
+  padding-left: 40px;
 }
 .shift-done{
   animation: slide 0.5s cubic-bezier(0.86, 0, 0.07, 0.995);
+}
+.contact-content{
+  border: 2px solid white;
+  display:flex;
+}
+.contact-info{
+  padding: 0 40px;
+}
+.appear{
+  animation: appear 1.5s ease-in-out;
+}
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
 }
