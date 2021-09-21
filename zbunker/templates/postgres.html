@@ -1,0 +1,188 @@
+{% from 'footer.html' import footer %}
+{% from 'tag_cloud.html' import tagCloud %}
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="container-fluid p-0 black">
+        <div class="crypt-heading heading headingtext" data-item = 'LEARN POSTGRESQL' style="font-size:90px;padding-top:80px;"></div>
+
+        <!-- jump to category -->
+        <div class="container-fluid p-0">
+          <div class="inner-container">
+
+            <!-- videos -->
+            <div class="videos">
+              
+              <!-- video1 -->
+              <div class="video" id="c1">
+                <img src="../static/img/c/c part 0.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/0H8gJOK4b0w">Introduction to c</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">c ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing. Ethical Hackers and Bug Bounty Hunters use this tool to gather as much info about the network as possible. Its literally the most widely sought after tool for reconnaissance in a network.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video2 -->
+              <div class="video" id="c2">
+                <img src="../static/img/c/c part 1.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/xOdnbRaBUsY">WHAT IS c</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">Before we dive deep into the practical part, a li'l bit of theory won't do much harm :) In this video, I have explained about what c is and some more basic concepts which needs to be understood before we gets our hands dirty.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video3 -->
+              <div class="video" id="c3">
+                <img src="../static/img/c/c part 2.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/xFa9GsC_ijo">TARGET SPECIFICATION</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">Let's start our practical video series by understanding how to specify targets for scanning in c. There are a multitude of ways to do so and I have covered each one of them. Enjoy the video.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video4 -->
+              <div class="video" id="c4">
+                <img src="../static/img/c/c part 3.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/OiyhzKtZ4Bw">SCAN FOR LIVE HOSTS! | HOST DISCOVERY</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">If you are looking for a host to exploit, then this video is for you. How will you get to know the IP address of a live host? How to know whether it is up and running? What if there is a firewall? All of them are covered in this video. I have also included some theory to teach you the concept behind the working of these methods.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video5 -->
+              <div class="video" id="c5">
+                <img src="../static/img/c/c part 4.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/xHNGes_jR9Q">ARE YOUR PORTS OPEN? | PORT SCANNING TECHNIQUES</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">Well well,  we have identified our victim's IP. Now we intend to see what all ports are open and what all services he is running on them. This will help me in gather more information and choose the right exploit. Are you excited? Let's begin!</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video6 -->
+              <div class="video" id="c6">
+                <img src="../static/img/c/c part 5.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/xzVfnn92oXE">EXPLOIT THE PORTS!</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">Time to get our hands dirty and scan those open ports for the service version number (SVN). With SVN, we can look for exploits in Rapid7 or Exploit-db and plan our attack from there. We will also look at how we can identify what kind of OS is being run by the victim. This will help us in many ways as it helps in crafting malicious payloads only suitable to that OS only</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video7 -->
+              <div class="video" id="c7">
+                <img src="../static/img/c/c part 6.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/1qG9M49Aqsg">c SCRIPTING ENGINE | LEVEL UP YOUR PENTESTING CAREER</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">c SCRIPTING ENGINE is the most powerful tool c comes with. Very few people know the power of this engine. Learn the concepts and workarounds of c SCRIPTING ENGINE in this video. It is time to level up your pentesting game!</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video8 -->
+              <div class="video" id="c8">
+                <img src="../static/img/c/c part 7.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/on6c1ApnxsA">FIREWALL EVASION TECHNIQUES</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">In this video, I have discussed about bypassing a firewall using c if it is present in front of a port. Bear it in mind that this method is not 100% working, but its always worth a try ain't it?
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- video9 -->
+              <div class="video" id="c9">
+                <img src="../static/img/c/c part 8.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/KJU1pw8yfU4">SAVING THE RESULTS INTO A FILE + TEST YOUR KNOWLEDGE</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">So finally we have arrived at the last video of our c Practical guide series and in this video I have explained the three ways in which you can save the results into a file in c.  There is one extra way as well but we won't be needing it as it is made purely for fun. After that, we will jump into the TEST YOUR KNOWLEDGE section where your conceptual understanding will be put to test. So gear up for the final battle and prove your worth that you are the real c MOGHUL!</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- videos section end -->
+
+            <!-- sidebar -->
+            <div class="sidebar">
+              <div class="sidebar-content">
+                
+                <div class="sidebar-item-level">
+                  <div class="level">level - basic</div>
+                </div>
+
+                <div class="sidebar-item">
+                  <div class="sidebar-item-holder" style="text-align: left;">
+                    <div class="title-holder" style="position: relative;margin-bottom:20px;">
+                      <div class="un-anywhere" style="bottom:0; height:2px;width:10%;"></div>
+                      <div class="heading" style="font-size:35px;">contents</div>
+                    </div>
+                    
+                    <ul class="sidebar-list">
+                      <li><a href="#c1">Introduction</a></li>
+                      <li><a href="#c2">What is c</a></li>
+                      <li><a href="#c3">Target Specification</a></li>
+                      <li><a href="#c4">Host Discovery</a></li>
+                      <li><a href="#c5">Port Scanning Techniques</a></li>
+                      <li><a href="#c6">Exploit the Ports</a></li>
+                      <li><a href="#c7">c Scripting Engine</a></li>
+                      <li><a href="#c8">Firewall Evasion</a></li>
+                      <li><a href="#c9">Saving the Results</a></li>
+                    </ul>                                                                                                                                                                                                                                     </ul>
+                  </div>
+                </div>
+
+                <!-- explore others -->
+                <div class="sidebar-item">
+                  <div class="sidebar-item-holder" style="text-align: left;">
+                    <div class="title-holder" style="position: relative;margin-bottom:20px;">
+                      <div class="un-anywhere" style="bottom:0; height:2px;width:10%;"></div>
+                      <div class="heading" style="font-size:35px;">EXPLORE OTHERS</div>
+                    </div>
+
+                    {{ tagCloud() }}
+                    
+                  </div>
+                </div>
+
+                <!-- author -->
+                <div class="sidebar-item">
+                  <div class="heading center"><i>pointman.</i></div>
+                </div>
+
+              </div>
+            </div>
+            <!-- sidebar end -->
+
+          </div>
+          <!-- inner container end -->
+        </div>        
+        <!--container end  -->
+
+        <!-- footer-section -->
+        {{ footer() }}
+
+    </div>
+    <!-- main container end -->
+
+
+    <!--Back-to-Top button-->
+    <div class="enclose bordar black" id="bottomtoup" ><i class="fas fa-caret-up"></i></div>
+
+    <script src="../static/js/crypt.js"></script>
+    <script src="{{ url_for('static', filename='js/bottomtoup.js') }}" ></script>
+
+{% endblock %}
