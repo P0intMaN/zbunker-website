@@ -565,6 +565,9 @@ nav ul li {
 }
 
 /* texts, fonts */
+.tetsuo-font{
+  font-family: 'Rajdhani';
+}
 
 .sub-heading {
   font-size: 50px;
@@ -2514,6 +2517,7 @@ color: #00A1A9;
 }
 .contact-info{
   padding: 0 40px;
+  width: 1000px;
 }
 .appear{
   animation: appear 1.5s ease-in-out;
@@ -2528,4 +2532,9 @@ color: #00A1A9;
   100%{
     opacity:1;
   }
+}
+.contact-para{
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+  padding:10px;
 }
