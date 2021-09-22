@@ -565,6 +565,9 @@ nav ul li {
 }
 
 /* texts, fonts */
+.tetsuo-font{
+  font-family: 'Rajdhani';
+}
 
 .sub-heading {
   font-size: 50px;
@@ -2484,14 +2487,84 @@ color: #00A1A9;
   content: ' | all rights reserved.'
 }
 /* footer section ends | contact us section begins */
+.contact{
+  position: relative;
+  z-index:3;
+}
+.contact-wrapper{
+  padding-bottom: 240px;
+}
 .right-contact{
+  position:relative;
+  z-index: -2;
   padding-left: 600px;
 }
 .right-contact-content{
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px 140px;
+  position:absolute;
+  top:60%;
+  right:0;
+}
+.left-contact{
+  position:relative;
+  z-index: -2;
+}
+.left-contact-content{
+  position: absolute;
+  top:60%;
+  left:0;
+  padding-left: 40px;
 }
 .shift-done{
   animation: slide 0.5s cubic-bezier(0.86, 0, 0.07, 0.995);
 }
+.contact-content{
+  border: 2px solid white;
+  display:flex;
+}
+.contact-info{
+  padding: 0 40px;
+  width: 1000px;
+}
+.appear{
+  animation: appear 1.5s ease-in-out;
+}
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+.contact-para{
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+  padding:10px;
+}
+.github-logo{
+  position: absolute;
+  z-index: -1;
+  margin-left: -200px;
+  transition: 1s;
+}
+.linkedin-logo-card{
+  margin-left:-40px;
+  transition: 1s;
+  fill: gray;
+}
+.github-logo:hover{
+  fill: #321A4B;
+  transition: 0.5s;
+}
+.logo-right{
+  margin-left:750px;
+}
+.linkedin-logo-right{
+  display:flex;
+  justify-content: flex-end;
+  margin-right: -40px;
+}
+
