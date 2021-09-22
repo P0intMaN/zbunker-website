@@ -180,3 +180,16 @@ def linux():
 def c():
     title = "C Programming"
     return render_template("c.html", title=title)
+
+
+@app.route("/learn/postgresql")
+def postgres():
+    title = "Learn PostgreSQL"
+    return render_template("postgres.html", title=title)
+
+
+@app.route("/contact-us")
+def contact():
+
+    title = "Contact Us"
+    return render_template("contact.html", title=title)

@@ -1,0 +1,95 @@
+{% from 'footer.html' import footer %}
+{% from 'tag_cloud.html' import tagCloud %}
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="container-fluid p-0 black">
+        <div class="crypt-heading heading headingtext" data-item = 'LEARN POSTGRESQL' style="font-size:90px;padding-top:80px;"></div>
+
+        <!-- jump to category -->
+        <div class="container-fluid p-0">
+          <div class="inner-container">
+
+            <!-- videos -->
+            <div class="videos">
+              
+              <!-- video1 -->
+              <div class="video" id="postgres1">
+                <img src="../static/img/postgres/dbandsql.png">
+                <div class="post-section" style="padding-top:30px;">
+                  <div class="heading" style="font-size:45px;line-height: 45px;"><a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/wBzHs2pt9t4">What is PostgreSQL?</a></div>
+                  <div class="post-desc">
+                    <p class="post-desc-content">This video marks the beginning of the PostgreSQL or Postgres series. We will master the fundamentals of this powerful yet awesome database so that you can find it comfortable enough to work with and apply it in your projects.
+
+                      So, the next time when it comes to handling of data, you already know you got it covered.</p>
+                  </div>
+                </div>
+              </div>
+
+              
+
+            </div>
+            <!-- videos section end -->
+
+            <!-- sidebar -->
+            <div class="sidebar">
+              <div class="sidebar-content">
+                
+                <div class="sidebar-item-level">
+                  <div class="level">level - basic</div>
+                </div>
+
+                <div class="sidebar-item">
+                  <div class="sidebar-item-holder" style="text-align: left;">
+                    <div class="title-holder" style="position: relative;margin-bottom:20px;">
+                      <div class="un-anywhere" style="bottom:0; height:2px;width:10%;"></div>
+                      <div class="heading" style="font-size:35px;">contents</div>
+                    </div>
+                    
+                    <ul class="sidebar-list">
+                      <li><a href="#postgres1">What is PostgreSQL?</a></li>
+                    </ul>                                                                                                                                                                                                                                     </ul>
+                  </div>
+                </div>
+
+                <!-- explore others -->
+                <div class="sidebar-item">
+                  <div class="sidebar-item-holder" style="text-align: left;">
+                    <div class="title-holder" style="position: relative;margin-bottom:20px;">
+                      <div class="un-anywhere" style="bottom:0; height:2px;width:10%;"></div>
+                      <div class="heading" style="font-size:35px;">EXPLORE OTHERS</div>
+                    </div>
+
+                    {{ tagCloud() }}
+                    
+                  </div>
+                </div>
+
+                <!-- author -->
+                <div class="sidebar-item">
+                  <div class="heading center"><i>pointman.</i></div>
+                </div>
+
+              </div>
+            </div>
+            <!-- sidebar end -->
+
+          </div>
+          <!-- inner container end -->
+        </div>        
+        <!--container end  -->
+
+        <!-- footer-section -->
+        {{ footer() }}
+
+    </div>
+    <!-- main container end -->
+
+
+    <!--Back-to-Top button-->
+    <div class="enclose bordar black" id="bottomtoup" ><i class="fas fa-caret-up"></i></div>
+
+    <script src="../static/js/crypt.js"></script>
+    <script src="{{ url_for('static', filename='js/bottomtoup.js') }}" ></script>
+
+{% endblock %}
