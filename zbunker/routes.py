@@ -182,6 +182,12 @@ def c():
     return render_template("c.html", title=title)
 
 
+@app.route("/learn/postgresql")
+def postgres():
+    title = "Learn PostgreSQL"
+    return render_template("postgres.html", title=title)
+
+
 @app.route("/contact-us")
 def contact():
 
