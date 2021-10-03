@@ -1,4 +1,4 @@
-# Cryptonite Contributors' Guide
+# zbunker-website Contributors' Guide
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. But it is
 also important to follow the best practices so that there is no confusion.
