@@ -1,4 +1,3 @@
-{% from 'footer.html' import footer %}
 {% extends "layout.html" %}
 {% block content %}
     <div class="container-fluid secondary pl-0" >
@@ -42,12 +41,7 @@
             </div>
         </div>
         <!-- about content ends  -->
-
-        <!-- Footer section -->
-        {{ footer() }}
-        
     </div>
-    
     <!-- main container ends -->
     <script src="{{ url_for('static', filename='js/about.js') }}" ></script>
 {% endblock %}
