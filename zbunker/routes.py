@@ -187,6 +187,11 @@ def postgres():
     title = "Learn PostgreSQL"
     return render_template("postgres.html", title=title)
 
+@app.route("/learn/ai-basics")
+def ai():
+    title = "A.I Basics"
+    return render_template("postgres.html", title=title)
+
 
 @app.route("/contact-us")
 def contact():
