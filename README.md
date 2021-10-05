@@ -31,7 +31,7 @@ We believe in ***free and quality education for all***.
 - [ ] Add video contents
 - [ ] Add resources
 - [ ] Create filter based gallery for courses
-- [ ] Add footer
+- [x] Add footer
 - [ ] Migrate to PostgreSQL
 - [ ] Add forgot password functionality
 - [ ] Add Google reCaptcha
