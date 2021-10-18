@@ -59,6 +59,11 @@ We believe in ***free and quality education for all***.
 
 - ### Running the Project
 
+    Apply the database migrations first:
+    ```bash
+    flask db upgrade
+    ```
+
     Open up your **terminal (cmd in windows)** and navigate inside the Project directory: `zbunker-website/`. Then simply run this command:
 
     ```bash
