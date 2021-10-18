@@ -82,3 +82,9 @@ We believe in ***free and quality education for all***.
 4. [Flask](https://flask.palletsprojects.com/) - Flask is a microframework for Python based on Werkzeug and Jinja 2
 5. [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) - An extension for Flask that adds support for SQLAlchemy ORM to your application.
 6. [Jinja2 Templates](https://jinja.palletsprojects.com/) - Templating language used with Flask for frontend purposes.
+
+## Starred For a Cause ⭐
+[![Stargazers repo roster for @P0intMaN/zbunker-website](https://reporoster.com/stars/dark/P0intMaN/zbunker-website)](https://github.com/P0intMaN/zbunker-website/stargazers)
+
+## The Driving Force 🔥
+[![Forkers repo roster for @P0intMaN/zbunker-website](https://reporoster.com/forks/dark/P0intMaN/zbunker-website)](https://github.com/P0intMaN/zbunker-website/network/members)
