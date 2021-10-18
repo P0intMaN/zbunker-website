@@ -28,5 +28,3 @@ class Courses(db.Model, UserMixin):
     course_name = db.Column(db.Integer, primary_key=True, unique=True)
     is_prime = db.Column(db.Boolean, default=True, unique=False)
 
-
-db.create_all()
