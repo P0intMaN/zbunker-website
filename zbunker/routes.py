@@ -86,8 +86,6 @@ def email_validation():
     
     if not bool(re.match(pattern, email)):
         return jsonify(email_error='Please enter a valid email address.')
-    if not user:
-        return jsonify(email_error='You are not registered.', status=404)
     return jsonify(email_valid=True)
 
 def gen_otp():
@@ -96,19 +94,20 @@ def gen_otp():
 @app.route("/validate/send-otp", methods=["GET"])
 def send_otp():
     user_email = request.args.get('email')
-    print(user_email)
-    otp = gen_otp()     # Generate OTP
-    new_otp = OTPModel(email=user_email,otp=otp)
-    db.session.add(new_otp)
-    db.session.commit()
-    msg = Message(sender=os.environ.get('EMAIL_ADDRESS'), recipients=[user_email], subject='Forgot Password | ZBunker')
-    msg.html = render_template('forgot_password_email.html', otp=otp)
-    try:
-        mail.send(msg)
-        return jsonify(otp_sent=f'An OTP has been sent successfully to {user_email}')
-    except Exception as e:
-        print(e)
-        return jsonify(otp_error='Something went wrong while sending the OTP.')
+    if User.query.filter_by(email=user_email).first():
+        otp = gen_otp()     # Generate OTP
+        new_otp = OTPModel(email=user_email,otp=otp)
+        db.session.add(new_otp)
+        db.session.commit()
+        msg = Message(sender=os.environ.get('EMAIL_ADDRESS'), recipients=[user_email], subject='Forgot Password | ZBunker')
+        msg.html = render_template('forgot_password_email.html', otp=otp)
+        try:
+            mail.send(msg)
+            return jsonify(otp_sent=f'An OTP has been sent successfully to {user_email}')
+        except Exception as e:
+            print(e)
+            return jsonify(otp_error='Something went wrong while sending the OTP.')
+    return jsonify(user_not_found=True)
 
 @app.route("/validate/verify-otp", methods=["GET"])
 def validate_otp():

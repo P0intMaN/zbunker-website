@@ -3,14 +3,14 @@
         {% for category, message in messages %}
         {% if category == 'error' %}
         <div
-          class="alert alert-danger alert-dismissible mt-3 fade show text-center
+          class="alert alert-danger mt-3 text-center"
           role="alert"
         >
           {{message}}
         </div>
         {% else %}
         <div
-          class="alert alert-{{category}} alert-dismissible mt-3 fade show text-center"
+          class="alert alert-{{category}} mt-3 text-center"
           role="alert"
         >
           {{message}}
