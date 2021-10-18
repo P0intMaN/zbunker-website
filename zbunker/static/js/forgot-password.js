@@ -46,7 +46,7 @@ function sendOTP() {
       if (data.otp_error) {
         otpFeedBackArea.style.display = "block";
         otpFeedBackArea.innerHTML = `<p class='alert alert-danger'>${data.otp_error}</p>`;
-      } else {
+      } else if(data.otp_sent) {
         otpFeedBackArea.style.display = "block";
         otpFeedBackArea.innerHTML = `<p class='alert alert-success'>${data.otp_sent}</p>`;
         $("#sendOtpBtn").hide();
