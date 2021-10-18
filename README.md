@@ -31,7 +31,7 @@ We believe in ***free and quality education for all***.
 - [x] Add anti-CSRF tokens
 - [ ] Add video contents
 - [ ] Add resources
-- [ ] Create filter based gallery for courses
+- [x] Create filter based gallery for courses
 - [x] Add footer
 - [ ] Migrate to PostgreSQL
 - [ ] Add forgot password functionality
