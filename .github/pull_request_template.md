@@ -1,20 +1,16 @@
-# Description
+# Select the type of PR
+- [ ] bug fix
+- [ ] feature
+- [ ] documentation update/addition
+- [ ] code clean-up / corrected formatting
+- [ ] other
 
+## Short Description
 
-## Issues
-<sup> *(Please include a summary of the issues and bugs to be fixed)* </sup>
+### Describe testing method(s) (if any)
 
-
-## Fixes
-<sup> *(Please describe the fixes)* </sup>
-
-
-
-### Type of Change
-
-Please **tick** the options that are relevant.
-
-- [ ] Bug fix (non-breaking change which fixes an issue).
-- [ ] New feature (non-breaking change which adds functionality).
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected).
-- [ ] This change requires a documentation update.
+## Check all that are applicable (important)
+- [ ] My code follows the code style of this project.
+- [ ] I Added relevant comments to my code
+- [ ] I have updated the documentation appropriately.
+- [ ] My changes generate no new warnings
