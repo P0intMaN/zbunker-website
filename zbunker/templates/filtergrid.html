@@ -45,32 +45,38 @@
 
         <div class="gallery">
             <!-- AI -->
-            <div class="imageBox filter-fund">
+            <!-- <div class="imageBox filter-fund">
                 <img src="../static/img/ai-fade.png">
-            </div>
+            </div> -->
             <!-- mongo -->
             <div class="imageBox filter-dev">
-                <img src="../static/img/mongo-fade.png">
+                <a href="{{url_for('mongo')}}"><img src="../static/img/mongo-fade.png"></a>
             </div>
             <!-- git -->
             <div class="imageBox filter-dev">
-                <img src="../static/img/git-fade.png">
+                <a href="{{url_for('git')}}"><img src="../static/img/git-fade.png"></a>
             </div>
             <!-- postgres -->
             <div class="imageBox filter-dev">
-                <img src="../static/img/zglitch.gif">
+                <a href="{{url_for('postgres')}}"><img src="../static/img/zglitch.gif"></a>
             </div>
             <!-- linux -->
             <div class="imageBox filter-dev">
-                <img src="../static/img/linuxfade.png">
+                <a href="{{url_for('linux')}}"> <img src="../static/img/linuxfade.png"></a>
             </div>
             <!-- nmap -->
             <div class="imageBox filter-cyber">
-                <img src="../static/img/nmap-fade.jpg">
+                <a href="{{url_for('nmap')}}"><img src="../static/img/nmap-fade.jpg"></a>
             </div>
             <!-- python -->
             <div class="imageBox filter-prog">
-                <img src="../static/img/emergingpython.png">
+                <a href="{{url_for('pythonprogramming')}}"><img src="../static/img/emergingpython.png"></a>
+                
+            </div>
+            <!-- ethical hacking -->
+            <div class="imageBox filter-cyber">
+                <a href="{{url_for('eth')}}"><img src="../static/img/emergingpython5.png"></a>
+                
             </div>
         </div>
 

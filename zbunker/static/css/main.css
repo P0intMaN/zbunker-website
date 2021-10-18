@@ -2432,6 +2432,11 @@ color: #00A1A9;
 .imageBox img{
   width: 490px;
 }
+.imageBox:hover{
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 1.5s;
+}
 /* grid gallery section ends | footer section begins */
 .footer-cover{
   padding-top: 150px;
