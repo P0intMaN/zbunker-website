@@ -17,6 +17,12 @@ class User(db.Model, UserMixin):
         return f"{self.username}, {self.email}"
 
 
+class OTPModel(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(200), nullable=False)
+    otp = db.Column(db.Integer)
+
+
 class Courses(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     course_name = db.Column(db.Integer, primary_key=True, unique=True)
