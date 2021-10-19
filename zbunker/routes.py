@@ -8,6 +8,16 @@ import json
 import re
 from random import randint
 import os
+import stripe
+
+
+STRIPE_KEYS = {
+    "secret_key": os.environ.get("STRIPE_SECRET_KEY"),
+    "publishable_key": os.environ.get("STRIPE_PUBLISHABLE_KEY"),
+    "endpoint_secret": os.environ["STRIPE_ENDPOINT_SECRET"],
+}
+
+stripe.api_key = STRIPE_KEYS["secret_key"]
 
 
 @app.route("/")
@@ -37,6 +47,7 @@ def register():
             user.set_password(form.password.data)
             db.session.add(user)
             db.session.commit()
+            flash('Signup success, please log in')
             return redirect(url_for("login"))
         else:
             return render_template(
@@ -58,9 +69,13 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user and user.check_password(form.password.data):
             login_user(user, remember=form.remMe.data)
-            nextPage = request.args.get(
-                "next"
-            )  # a feature to route to the next url (for login_required only)
+            if user.prime:
+                nextPage = request.args.get(
+                    "next"
+                )  # a feature to route to the next url (for login_required only)
+            else:
+                # Redirect to payments page
+                nextPage = '/payment'
             return redirect(nextPage) if nextPage else redirect(url_for("home"))
 
         else:
@@ -77,28 +92,33 @@ def logout():
     return redirect(url_for("home"))
 
 # Email Validation Route
+
+
 @app.route('/validate/email', methods=['POST'])
 def email_validation():
     data = json.loads(request.data)
     email = data['email']
     pattern = '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
-    
+
     if not bool(re.match(pattern, email)):
         return jsonify(email_error='Please enter a valid email address.')
     return jsonify(email_valid=True)
 
+
 def gen_otp():
     return randint(100000, 999999)
+
 
 @app.route("/validate/send-otp", methods=["GET"])
 def send_otp():
     user_email = request.args.get('email')
     if User.query.filter_by(email=user_email).first():
         otp = gen_otp()     # Generate OTP
-        new_otp = OTPModel(email=user_email,otp=otp)
+        new_otp = OTPModel(email=user_email, otp=otp)
         db.session.add(new_otp)
         db.session.commit()
-        msg = Message(sender=os.environ.get('EMAIL_ADDRESS'), recipients=[user_email], subject='Forgot Password | ZBunker')
+        msg = Message(sender=os.environ.get('EMAIL_ADDRESS'), recipients=[
+                      user_email], subject='Forgot Password | ZBunker')
         msg.html = render_template('forgot_password_email.html', otp=otp)
         try:
             mail.send(msg)
@@ -108,11 +128,13 @@ def send_otp():
             return jsonify(otp_error='Something went wrong while sending the OTP.')
     return jsonify(user_not_found=True)
 
+
 @app.route("/validate/verify-otp", methods=["GET"])
 def validate_otp():
     user_email = request.args.get('email')
     otp = request.args.get('otp')
-    otp_from_db = OTPModel.query.filter_by(email=user_email).order_by(OTPModel.id.desc()).first()
+    otp_from_db = OTPModel.query.filter_by(
+        email=user_email).order_by(OTPModel.id.desc()).first()
     if str(otp_from_db.otp) == str(otp):
         return jsonify(otp_match=True)
     return jsonify(otp_mismatch='Please enter the correct OTP')
@@ -131,6 +153,122 @@ def forgot_password():
         return redirect(url_for('login'))
 
     return render_template("forgot-password.html")
+
+@app.route('/payment')
+def payment():
+    """Payment Route - Accessible only to logged in users"""
+
+    if current_user.is_authenticated:
+        if current_user.prime:
+            return redirect('home')
+        return render_template('payment.html')
+    flash('You are not logged in!', category='error')
+    return redirect('login')
+
+@app.route("/config")
+def get_publishable_key():
+    """Route to get the publishable_key on the client side"""
+    
+    stripe_config = {"publicKey": STRIPE_KEYS["publishable_key"]}
+    return jsonify(stripe_config)
+
+
+@app.route("/create-checkout-session")
+def create_checkout_session():
+    """Route to create checkout session"""
+    
+    if current_user.is_authenticated:
+        domain_url = os.environ.get("DOMAIN_URL")
+        stripe.api_key = STRIPE_KEYS["secret_key"]
+
+        try:
+            # Create new Checkout Session for the order
+            # Other optional params include:
+            # [billing_address_collection] - to display billing address details on the page
+            # [customer] - if you have an existing Stripe Customer ID
+            # [payment_intent_data] - capture the payment later
+            # [customer_email] - prefill the email input in the form
+            # For full details see https://stripe.com/docs/api/checkout/sessions/create
+
+            # ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
+            checkout_session = stripe.checkout.Session.create(
+                customer_email=current_user.email,
+                client_reference_id=current_user.id if current_user.is_authenticated else None,
+                success_url=domain_url +
+                "success?session_id={CHECKOUT_SESSION_ID}",
+                cancel_url=domain_url + "cancelled",
+                payment_method_types=["card"],
+                mode="payment",
+                line_items=[
+                    {
+                        "name": "Prime Subscription",
+                        "quantity": 1,
+                        "currency": "inr", # TODO: Change the currency
+                        "amount": "30000", # TODO: Change the amount
+                    }
+                ]
+            )
+            return jsonify({"sessionId": checkout_session["id"]})
+        except Exception as e:
+            print(e)
+            return jsonify(error=str(e)), 403
+    flash('You are not logged in!', category='error')
+    return redirect('login')
+
+
+@app.route("/success")
+def success():
+    """Route to show payment success message"""
+    if current_user.is_authenticated:
+        if current_user.prime:
+            return render_template("success.html", header='Payment Success', para='Thanks for your support.')
+        return render_template("success.html", header='Access Denied', para='Please login again to pay!')
+    flash('You are not logged in!', category='error')
+    return redirect('login')
+
+@app.route("/cancelled")
+def cancelled():
+    """Route for failed payment message"""
+    if current_user.is_authenticated:
+        if not current_user.prime:
+            return render_template("cancelled.html")    
+        return redirect('home')
+    flash('You are not logged in!', category='error')
+    return redirect('login')
+
+
+@app.route("/webhook", methods=["POST"])
+def stripe_webhook():
+    """Route to confirm payment using Webhook - called by Stripe automatically"""
+    
+    payload = request.get_data(as_text=True)
+    sig_header = request.headers.get("Stripe-Signature")
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, STRIPE_KEYS["endpoint_secret"]
+        )
+
+    except ValueError:
+        # Invalid payload
+        return "Invalid payload", 400
+    except stripe.error.SignatureVerificationError:
+        # Invalid signature
+        return "Invalid signature", 400
+
+    # Handle the checkout.session.completed event
+    if event["type"] == "checkout.session.completed":
+        print("Payment was successful.")
+    
+        # On Payment success, set the prime field to true
+        user_id = event["data"]["object"]["client_reference_id"]
+        user = User.query.filter_by(id=user_id).first()
+        user.prime = True
+        db.session.add(user)
+        db.session.commit()
+
+
+    return "Success", 200
 
 
 @app.route("/pt")
@@ -164,7 +302,7 @@ def zbunkerprime():
 
     # get the no of users and calc the percentage (short goal)
     user = User.query.all()
-    total = 20  #  the target goal
+    total = 20  # the target goal
     members = len(user)
     percentage = (members / total) * 100
     filler = str(percentage) + "%"
