@@ -32,9 +32,9 @@ def register():
         if form.validate_on_submit():
             user = User(
                 username=form.username.data,
-                email=form.email.data,
-                password=form.password.data,
+                email=form.email.data
             )
+            user.set_password(form.password.data)
             db.session.add(user)
             db.session.commit()
             return redirect(url_for("login"))
@@ -56,7 +56,7 @@ def login():
 
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
-        if user and user.password == form.password.data:
+        if user and user.check_password(form.password.data):
             login_user(user, remember=form.remMe.data)
             nextPage = request.args.get(
                 "next"
@@ -82,7 +82,6 @@ def email_validation():
     data = json.loads(request.data)
     email = data['email']
     pattern = '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
-    user = User.query.filter_by(email=email).first()
     
     if not bool(re.match(pattern, email)):
         return jsonify(email_error='Please enter a valid email address.')
@@ -125,7 +124,7 @@ def forgot_password():
         email = request.form.get('email')
         password = request.form.get('password')
         user = User.query.filter_by(email=email).first()
-        user.password = password
+        user.set_password(password)
         db.session.add(user)
         db.session.commit()
         flash('Your password has been changed successfully!', category='success')

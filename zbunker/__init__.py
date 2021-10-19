@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_manager
 from flask_mail import Mail
 from flask_migrate import Migrate
+from flask_bcrypt import Bcrypt
 import os
 from dotenv import load_dotenv
 
@@ -18,6 +19,7 @@ if db.engine.url.drivername == 'sqlite':
 else:
     migrate = Migrate(app, db)
 mail = Mail(app)
+bcrypt = Bcrypt(app)
 
 login_manager = LoginManager(app)
 login_manager.login_view = "login"
