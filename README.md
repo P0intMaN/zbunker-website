@@ -33,10 +33,10 @@ We believe in ***free and quality education for all***.
 - [ ] Add resources
 - [x] Create filter based gallery for courses
 - [x] Add footer
-- [ ] Migrate to PostgreSQL
-- [ ] Add forgot password functionality
-- [ ] Add Google reCaptcha
-- [ ] Add Donations Gateway (Instamojo or Stripe)
+- [x] Migrate to PostgreSQL
+- [x] Add forgot password functionality
+- [ ] Add Google reCaptcha (Optional)
+- [x] Add Donations Gateway (Instamojo or Stripe)
 - [ ] Deploy rate limit check on login/register (Security)
 - [ ] Make Website Responsive
 - [ ] Deploy the website on a public server (Final)
