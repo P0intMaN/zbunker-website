@@ -52,9 +52,9 @@ class VerifyOTPForm(FlaskForm):
         )
         if user:
             if user.otp != OTP.data:
-                raise ValidationError("Incorrect OTP. Try Again")
+                raise ValidationError("Incorrect OTP. Trysdf Again")
         else:
-            raise ValidationError("Incorrect OTP. Try Again!")
+            raise ValidationError("Incorrect OTP. Tryssdfs Again!")
 
 
 class ResetPasswordForm(FlaskForm):
