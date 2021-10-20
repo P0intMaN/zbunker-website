@@ -1,0 +1,65 @@
+{% from 'footer.html' import footer %}
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row no-gutter gray">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex pakki pl-0">
+            <div class="glitchzbunker">
+                <img src="../static/img/glitchlogo.gif" alt="">
+            </div>
+        </div>
+
+        <!-- The content half -->
+        <div class="col-md-6 pakki" style="padding-bottom: 60px;">
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto bordar">
+                            {% include 'alerts.html' %}
+                            <h3 class="display-4" style="font-weight: 700; text-transform: uppercase; color:#EC4E00;">Otp verification</h3>
+                            <p class="mb-4" style="color: white; font-weight: 400; font-size: 20px;text-transform: uppercase;">Enter the otp recieved in your email</p>
+                            <form method="POST" action="">
+                                {{ form.hidden_tag() }}
+                                <fieldset class="form-group">
+                                    <!-- <legend class="border-bottom mb-4">Let's sign you up</legend> -->
+                                    <div class="form-group mb-4">
+                                        {{ form.OTP.label(class="form-control-label") }}
+                
+                                        {% if form.OTP.errors %}
+                                            {{form.OTP(class="form-control form-conrtol-lg is-invalid")}}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.OTP.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                    
+                                        {% else %}
+                                            {{ form.OTP(class="form-control form-control-lg") }}
+                                        {% endif %}     
+                                    </div> 
+                                </fieldset>
+
+                                <div class="form-group mb-4">
+                                    {{ form.verifyOTP(class="btn btn-light") }}
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- Content half End -->
+    </div>
+    <!-- row end -->
+</div>
+<!-- main container ends -->
+
+<div class="container-fluid p-0 secondary">
+    <!-- footer-section -->
+    {{ footer() }}
+</div>
+
+{% endblock %}
