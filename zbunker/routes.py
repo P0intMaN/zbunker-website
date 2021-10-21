@@ -1,7 +1,14 @@
+from wtforms.validators import ValidationError
 from zbunker import app, db, mail
 from flask_mail import Message
-from flask import render_template, redirect, flash, url_for, request, jsonify
-from zbunker.forms import LoginForm, RegistrationForm
+from flask import render_template, redirect, flash, url_for, request, jsonify, session
+from zbunker.forms import (
+    LoginForm,
+    RegistrationForm,
+    OTPForm,
+    ResetPasswordForm,
+    VerifyOTPForm,
+)
 from zbunker.models import User, OTPModel
 from werkzeug.urls import url_parse
 from flask_login import login_user, current_user, logout_user, login_required
@@ -72,78 +79,93 @@ def login():
     return render_template("login.html", form=form)
 
 
+# Email Validation Route
+@app.route("/forgot-password", methods=["GET", "POST"])
+def forgotpassword():
+    form = OTPForm()
+
+    if request.method == "POST":
+
+        if form.validate_on_submit():
+            email = User.query.filter_by(email=form.email.data).first()
+            if email:
+                otp = gen_otp()  # Generate OTP
+                new_otp = OTPModel(email=form.email.data, otp=otp)
+                db.session.add(new_otp)
+                db.session.commit()
+                msg = Message(
+                    sender=os.environ.get("EMAIL_ADDRESS"),
+                    recipients=[form.email.data],
+                    subject="Forgot Password | ZBunker",
+                )
+                msg.html = render_template("forgot_password_email.html", otp=otp)
+                try:
+                    mail.send(msg)
+
+                except Exception as e:
+                    print(e)
+                    flash(
+                        "Something went wrong while sending the OTP.", category="danger"
+                    )
+            session["user_email"] = form.email.data
+
+            return redirect(url_for("otpverify"))
+
+    return render_template("forgot-password.html", form=form)
+
+
+def gen_otp():
+    keybase = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    otp = ""
+    for i in range(6):
+        otp += str(keybase[randint(0, len(keybase) - 1)])
+    print(otp)
+    return otp
+
+
+@app.route("/validate/otp", methods=["GET", "POST"])
+def otpverify():
+    form = VerifyOTPForm()
+    email = session["user_email"]
+
+    if request.method == "POST":
+        if form.validate_on_submit():
+            if email:
+                user = (
+                    OTPModel.query.filter_by(email=email)
+                    .order_by(OTPModel.id.desc())
+                    .first()
+                )
+
+                if user.otp != form.OTP.data:
+                    flash("Your Password is Incorrect. Try Again")
+
+                else:
+                    return redirect(url_for("resetpassword"))
+
+    return render_template("enter-otp.html", form=form)
+
+
+@app.route("/reset-password", methods=["GET", "POST"])
+def resetpassword():
+    email = session["user_email"]
+    form = ResetPasswordForm()
+
+    if request.method == "POST":
+        if form.validate_on_submit():
+            user = User.query.filter_by(email=email).first()
+            user.set_password(form.password.data)
+            db.session.commit()
+
+            return redirect(url_for("home"))
+
+    return render_template("reset-password.html", form=form)
+
+
 @app.route("/logout")
 def logout():
     logout_user()
     return redirect(url_for("home"))
-
-
-# Email Validation Route
-@app.route("/validate/email", methods=["POST"])
-def email_validation():
-    data = json.loads(request.data)
-    email = data["email"]
-    pattern = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-
-    if not bool(re.match(pattern, email)):
-        return jsonify(email_error="Please enter a valid email address.")
-    return jsonify(email_valid=True)
-
-
-def gen_otp():
-    return randint(100000, 999999)
-
-
-@app.route("/validate/send-otp", methods=["GET"])
-def send_otp():
-    user_email = request.args.get("email")
-    if User.query.filter_by(email=user_email).first():
-        otp = gen_otp()  # Generate OTP
-        new_otp = OTPModel(email=user_email, otp=otp)
-        db.session.add(new_otp)
-        db.session.commit()
-        msg = Message(
-            sender=os.environ.get("EMAIL_ADDRESS"),
-            recipients=[user_email],
-            subject="Forgot Password | ZBunker",
-        )
-        msg.html = render_template("forgot_password_email.html", otp=otp)
-        try:
-            mail.send(msg)
-            return jsonify(
-                otp_sent=f"An OTP has been sent successfully to {user_email}"
-            )
-        except Exception as e:
-            print(e)
-            return jsonify(otp_error="Something went wrong while sending the OTP.")
-    return jsonify(user_not_found=True)
-
-
-@app.route("/validate/verify-otp", methods=["GET"])
-def validate_otp():
-    user_email = request.args.get("email")
-    otp = request.args.get("otp")
-    otp_from_db = (
-        OTPModel.query.filter_by(email=user_email).order_by(OTPModel.id.desc()).first()
-    )
-    if str(otp_from_db.otp) == str(otp):
-        return jsonify(otp_match=True)
-    return jsonify(otp_mismatch="Please enter the correct OTP")
-
-
-@app.route("/forgot-password", methods=["GET", "POST"])
-def forgot_password():
-    if request.method == "POST":
-        email = request.form.get("email")
-        password = request.form.get("password")
-        user = User.query.filter_by(email=email).first()
-        user.set_password(password)
-        db.session.add(user)
-        db.session.commit()
-        flash("Your password has been changed successfully!", category="success")
-        return redirect(url_for("login"))
-
-    return render_template("forgot-password.html")
 
 
 @app.route("/pt")
