@@ -148,16 +148,26 @@ def otpverify():
 
 @app.route("/reset-password", methods=["GET", "POST"])
 def resetpassword():
-    email = session["user_email"]
+    try:
+        email = session["user_email"]
+    except:
+        email = None
     form = ResetPasswordForm()
 
     if request.method == "POST":
         if form.validate_on_submit():
-            user = User.query.filter_by(email=email).first()
-            user.set_password(form.password.data)
-            db.session.commit()
+            if email:
+                user = User.query.filter_by(email=email).first()
+                if user:
+                    user.set_password(form.password.data)
+                    db.session.commit()
+                    return redirect(url_for("home"))
 
-            return redirect(url_for("home"))
+                else:
+                    flash("something doesn't seem right (UDE)", category="danger")
+
+            else:
+                flash("Something doesn't seem right. (SESSNONE)", category="danger")
 
     return render_template("reset-password.html", form=form)
 
