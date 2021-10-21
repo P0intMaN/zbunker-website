@@ -107,7 +107,7 @@ def forgotpassword():
                     flash(
                         "Something went wrong while sending the OTP.", category="danger"
                     )
-                session["user_email"] = form.email.data
+            session["user_email"] = form.email.data
 
             return redirect(url_for("otpverify"))
 
@@ -130,17 +130,18 @@ def otpverify():
 
     if request.method == "POST":
         if form.validate_on_submit():
-            user = (
-                OTPModel.query.filter_by(email=email)
-                .order_by(OTPModel.id.desc())
-                .first()
-            )
+            if email:
+                user = (
+                    OTPModel.query.filter_by(email=email)
+                    .order_by(OTPModel.id.desc())
+                    .first()
+                )
 
-            if user.otp != form.OTP.data:
-                flash("Your Password is Incorrect. Try Again")
+                if user.otp != form.OTP.data:
+                    flash("Your Password is Incorrect. Try Again")
 
-            else:
-                return redirect(url_for("resetpassword"))
+                else:
+                    return redirect(url_for("resetpassword"))
 
     return render_template("enter-otp.html", form=form)
 
