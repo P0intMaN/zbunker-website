@@ -1,3 +1,4 @@
+from logging import exception
 from wtforms.validators import ValidationError
 from zbunker import app, db, mail
 from flask_mail import Message
@@ -126,7 +127,10 @@ def gen_otp():
 @app.route("/validate/otp", methods=["GET", "POST"])
 def otpverify():
     form = VerifyOTPForm()
-    email = session["user_email"]
+    try:
+        email = session["user_email"]
+    except:
+        email = None
 
     if request.method == "POST":
         if form.validate_on_submit():
