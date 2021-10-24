@@ -1,5 +1,4 @@
-.env
+zbunker/.env
 *__pycache__
 zbunker/db.sqlite3
 private.txt
-env
